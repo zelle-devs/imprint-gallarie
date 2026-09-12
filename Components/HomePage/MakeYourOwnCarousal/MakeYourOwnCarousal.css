@@ -1,0 +1,257 @@
+.containerMakeYourOwnCarousal {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: var(--font-poppins), 'Montserrat', sans-serif;
+}
+
+.headerMakeYourOwnCarousal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.titleSectionMakeYourOwnCarousal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subTitleMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-paraESM, 12px);
+  color: var(--text-muted, #6b7280);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.mainTitleMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-headMD, 28px);
+  color: var(--text-main, #111827);
+  font-weight: 400;
+  margin: 0;
+}
+
+.moreLinkMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: var(--text-main, #111827);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.carouselWrapperMakeYourOwnCarousal {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.trackMakeYourOwnCarousal {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.trackMakeYourOwnCarousal::-webkit-scrollbar {
+  display: none;
+}
+
+.cardMakeYourOwnCarousal {
+  flex: 0 0 calc(25% - 15px);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapperMakeYourOwnCarousal {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f4f4f5;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.imageMakeYourOwnCarousal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.detailsMakeYourOwnCarousal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titleRowMakeYourOwnCarousal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flagIconMakeYourOwnCarousal {
+  font-size: 14px;
+}
+
+.productNameMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: var(--text-main, #111827);
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.regularPriceMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-paraESM, 12px);
+  color: var(--text-muted, #6b7280);
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.priceRowMakeYourOwnCarousal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.currentPriceMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  font-weight: 600;
+  color: var(--text-main, #111827);
+  margin: 0;
+}
+
+.saleColorMakeYourOwnCarousal {
+  color: #b91c1c; 
+}
+
+.discountTextMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-paraESM, 12px);
+  color: #b91c1c;
+  margin: 0;
+}
+
+.flashIconMakeYourOwnCarousal {
+  font-size: 14px;
+  color: #eab308;
+  background-color: #fef08a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.shippingMakeYourOwnCarousal {
+  font-size: var(--Imprint-font-paraESM, 12px);
+  color: var(--text-muted, #6b7280);
+  margin: 0;
+  margin-top: 4px;
+}
+
+.arrowButtonMakeYourOwnCarousal {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.rightArrowButtonMakeYourOwnCarousal {
+  right: -20px;
+}
+
+.leftArrowButtonMakeYourOwnCarousal {
+  left: -20px;
+}
+
+.arrowButtonMakeYourOwnCarousal:hover {
+  background-color: #f9fafb;
+}
+@media (max-width: 992px) {
+  .cardMakeYourOwnCarousal {
+    flex: 0 0 calc(33.333% - 13.33px);
+  }
+  .rightArrowButtonMakeYourOwnCarousal {
+    right: -10px;
+  }
+  .leftArrowButtonMakeYourOwnCarousal {
+    left: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardMakeYourOwnCarousal {
+    flex: 0 0 calc(50% - 10px);
+    max-width: 180px;
+  }
+  .headerMakeYourOwnCarousal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Yahan mobile screen ke liye changes kiye gaye hain */
+@media (max-width: 480px) {
+  .cardMakeYourOwnCarousal {
+    /* Pehle yeh 100% tha, ab isko 50% kar diya hai taake 2 cards nazar aayein */
+    flex: 0 0 calc(50% - 10px); 
+  }
+  
+  .arrowButtonMakeYourOwnCarousal {
+    /* 'display: none;' ko remove kar diya hai taake arrows hide na hon */
+    width: 32px;  /* Mobile ke liye size thora chota kar diya hai */
+    height: 32px;
+    top: 80px;
+  }
+
+  .imageMakeYourOwnCarousal{
+    max-height: 160px;
+    max-width: 180px;
+  }
+  .imageWrapperMakeYourOwnCarousal {
+  width: 100%;
+  max-height: 160px;
+  background-color: #f4f4f5;
+  margin-bottom: 15px;
+  max-width: 180px;
+  overflow: hidden;
+}
+  
+  .rightArrowButtonMakeYourOwnCarousal {
+    right: 5px; /* Arrows ko thora andar ki taraf shift kiya hai */
+  }
+  
+  .leftArrowButtonMakeYourOwnCarousal {
+    left: 5px; /* Arrows ko thora andar ki taraf shift kiya hai */
+  }
+  
+  .productNameMakeYourOwnCarousal, 
+  .currentPriceMakeYourOwnCarousal {
+    font-size: 12px; /* Mobile par 2 cards hain toh text ko thora set kiya hai */
+  }
+}

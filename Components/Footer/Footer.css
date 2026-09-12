@@ -1,0 +1,297 @@
+.wrapper-ImprintFooterMain {
+  background-color: var(--background-color);
+  width: 100%;
+  font-family: var(--font-poppins), sans-serif;
+  padding: 4rem 0 2rem 0;
+  height: 82vh;
+  color: var(--text-main);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08); /* separate static shadow, header jaisa */
+}
+
+/* Background image layer - blurred + mouse-move parallax */
+.bg-image-ImprintFooterMain {
+  position: absolute;
+  inset: -30px; /* thora bada rakha hai taake blur ke edges khali na dikhein movement ke waqt */
+  /* background-image: url('https://picsum.photos/1920/1080?random=42'); */
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px);
+  transform: scale(1.15) translate(0px, 0px);
+  transition: transform 0.25s ease-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Light overlay taake text readable rahe image ke upar */
+.bg-overlay-ImprintFooterMain {
+  position: absolute;
+  inset: 0;
+   background-color: #E8E4DC;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container-ImprintFooterMain {
+  position: relative;
+  z-index: 1;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.col1-ImprintFooterMain,
+.col2-ImprintFooterMain,
+.col3-ImprintFooterMain,
+.col4-ImprintFooterMain {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-ImprintFooterMain {
+  font-size: var(--Imprint-font-headMD);
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--Imprint-black);
+  margin-bottom: 1.5rem;
+}
+
+.BevoraMainFooter-logo {
+  font-size: var(--Imprint-font-headLG);
+  color: var(--Imprint-black);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.desc-ImprintFooterMain {
+  font-size: var(--Imprint-font-paraSM);
+  line-height: 1.8;
+  color: var(--text-main);
+  max-width: 320px;
+}
+
+.title-ImprintFooterMain {
+  font-size: var(--Imprint-font-paraESM);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--Imprint-black);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.spacing-ImprintFooterMain {
+  margin-top: 2rem;
+}
+
+.list-ImprintFooterMain {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link-ImprintFooterMain {
+  text-decoration: none;
+  font-size: var(--Imprint-font-paraSM);
+  color: var(--text-main);
+  transition: color 0.2s ease;
+}
+
+.link-ImprintFooterMain:hover {
+  color: var(--Imprint-blue);
+}
+
+.payments-ImprintFooterMain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 180px;
+}
+
+.payment-icon-ImprintFooterMain {
+  width: 38px;
+  height: 24px;
+  background-color: var(--Imprint-white);
+  border: 1px solid var(--Imprint-brown);
+  border-radius: 3px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.visa-ImprintFooterMain { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png'); }
+.mastercard-ImprintFooterMain { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg'); }
+.amex-ImprintFooterMain { background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg'); }
+.unionpay-ImprintFooterMain { background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1b/UnionPay_logo.svg'); }
+.jcb-ImprintFooterMain { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/JCB_logo.svg'); }
+.discover-ImprintFooterMain { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/57/Discover_Card_logo.svg'); }
+.diners-ImprintFooterMain { background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a6/Diners_Club_Logo3.svg'); }
+
+.bottom-bar-ImprintFooterMain {
+  grid-column: 1 / -1;
+  /* margin-top: 2rem; */
+  padding-top: 2rem;
+  border-top: 1px solid var(--Imprint-brown);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bottom-links-ImprintFooterMain {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bottom-link-ImprintFooterMain {
+  text-decoration: none;
+  font-size: var(--Imprint-font-paraSM);
+  color: var(--text-main);
+  transition: color 0.2s ease;
+}
+
+.bottom-link-ImprintFooterMain:hover {
+  color: var(--Imprint-blue);
+}
+
+.bottom-info-ImprintFooterMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bottom-left-ImprintFooterMain {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: var(--Imprint-font-paraSM);
+  color: var(--text-main);
+}
+
+.currency-ImprintFooterMain {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icons-ImprintFooterMain {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.social-icon-ImprintFooterMain {
+  width: 20px;
+  height: 20px;
+  color: var(--Imprint-black);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.social-icon-ImprintFooterMain:hover {
+  opacity: 0.7;
+}
+
+/* ===================================================
+   DESKTOP VIEW SAFETY RULE (Ensures Accordion is DISABLED on screens > 768px)
+   =================================================== */
+@media (min-width: 890px) {
+  .accordion-content {
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+  .accordion-icon {
+    display: none !important;
+  }
+  .accordion-header {
+    cursor: default !important;
+  }
+}
+
+/* ===================================================
+   MOBILE VIEW STYLING (Only applies to screens <= 768px)
+   =================================================== */
+@media (max-width: 890px) {
+  .wrapper-ImprintFooterMain {
+    height: auto; /* Fits long accordion content on mobile */
+    padding: 3rem 0 2rem 0;
+  }
+
+  .container-ImprintFooterMain {
+    grid-template-columns: 1fr; /* Stack items vertically */
+    gap: 1rem;
+  }
+
+  .col1-ImprintFooterMain {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .desc-ImprintFooterMain{
+    width: 100% ;
+    max-width: 640px;
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem 0;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .accordion-icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--Imprint-black, #000);
+    border-bottom: 2px solid var(--Imprint-black, #000);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+  }
+
+  .accordion-header.active .accordion-icon {
+    transform: rotate(-135deg); /* Arrow points up when expanded */
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+    padding: 0;
+  }
+
+  .accordion-content.open {
+    max-height: 400px; /* High enough to allow list expansion */
+    padding: 0.8rem 0 0.5rem 0;
+  }
+
+  .spacing-ImprintFooterMain {
+    margin-top: 1.5rem;
+  }
+
+  .bottom-links-ImprintFooterMain {
+    gap: 1rem;
+  }
+
+  .bottom-left-ImprintFooterMain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

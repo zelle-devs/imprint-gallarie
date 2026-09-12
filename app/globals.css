@@ -1,26 +1,114 @@
-@import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Default Colors */
+  --background-color: #F5F2EC; /* Ivory: Light off-white for a softer background */
+  --text-main: #2A2A2A;        /* Walnut: Darkest shade for high contrast readability */
+  --text-muted: #7A8B6E;       /* Sage: Olive tone for softer, secondary text */
+
+  --Imprint-black: #2A2A2A;    /* Walnut */
+  --Imprint-white: #F5F2EC;    /* Ivory */
+  --Imprint-brown: #C46A4A;    /* Terracotta: Replaces blue as a strong primary tone */
+  --Imprint-beige: #E7DCC5;    /* Sand: Subtle backgrounds/borders */
+  --Imprint-olive: #7A8B6E;    /* Sage: Additional accent color */
+  --Imprint-gold: #C8B093;     /* Champagne */  /* Great for buttons, highlights, or call-to-actions */
+
+
+  /* Imprint Font Sizes - Headings */
+  --Imprint-font-headLG: 32px;   /* Large */
+  --Imprint-font-headMD: 25px;   /* Medium */
+  --Imprint-font-headSM: 20px;   /* Small */
+  --Imprint-font-headESM: 18px;  /* Extra Small */
+  --Imprint-font-headEVSM: 16px; /* Extra Very Small */
+
+  /* Imprint Font Sizes - Paragraphs */
+  --Imprint-font-paraLG: 20px;   /* Large */
+  --Imprint-font-paraMD: 16px;   /* Medium */
+  --Imprint-font-paraSM: 14px;   /* Small */
+  --Imprint-font-paraESM: 12px;  /* Extra Small */
+  --Imprint-font-paraEVSM: 10px; /* Extra Very Small */
+}
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-main); 
+  font-family: var(--font-montserrat), sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), serif; /* Changed to Playfair */
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;  
+}
+ 
+h1 {
+  font-size: var(--Imprint-font-headLG);
+}
+
+h2 {
+  font-size: var(--Imprint-font-headMD);
+}
+
+h3 {
+  font-size: var(--Imprint-font-headSM);
+}
+
+h4 {
+  font-size: var(--Imprint-font-headESM);
+}
+
+h5, h6 {
+  font-size: var(--Imprint-font-headEVSM);
+}
+
+p {
+  font-size: var(--Imprint-font-paraMD); 
+  color: var(--text-muted);
+  margin: 0; 
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.MainContainerImprintDecor{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:980){
+  
+  body,
+  *{
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+h1, h2, h3, h4, h5, h6, button, a {
+    user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  span{
+    user-select: none;
+  }
 }

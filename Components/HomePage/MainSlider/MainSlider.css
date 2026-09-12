@@ -1,0 +1,51 @@
+ 
+.sliderContainerMainSliderHomePage {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+    background-color: #000;
+}
+ 
+.slideMainSliderHomePage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden; 
+    transition: opacity 2s ease-in-out, visibility 2s ease-in-out; 
+}
+ 
+.activeSlideMainSliderHomePage {
+    opacity: 1;
+    visibility: visible;
+}
+ 
+.dotsWrapperMainSliderHomePage {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+ 
+.dotMainSliderHomePage {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+ 
+.activeDotMainSliderHomePage {
+    background-color: rgba(255, 255, 255, 1);
+}

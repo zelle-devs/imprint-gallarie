@@ -1,0 +1,771 @@
+.pageWrapperBuyProductPage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.topSectionBuyProductPage {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.gallerySectionBuyProductPage {
+  position: sticky;
+  top:160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.galleryRowBuyProductPage {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.verticalThumbColumnBuyProductPage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  width: 76px;
+}
+
+.verticalThumbItemBuyProductPage {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--Imprint-gray, #f4f4f5);
+  cursor: pointer;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.7;
+}
+
+.verticalThumbItemBuyProductPage:hover {
+  opacity: 1;
+}
+
+.verticalThumbActiveBuyProductPage {
+  border-color: var(--text-main, #111111);
+  opacity: 1;
+}
+
+.verticalThumbImageBuyProductPage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+ 
+}
+
+.mainImageWrapperBuyProductPage {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--Imprint-gray, #f4f4f5);
+   max-height: calc(100vh - 160px - 2rem); 
+}
+
+.mainImageBuyProductPage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4.5 / 5;
+  max-height: calc(100vh - 160px - 2rem);
+}
+
+.detailsSectionBuyProductPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.ratingRowBuyProductPage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.starsBuyProductPage {
+  color: #E5484D;
+  font-size: var(--Imprint-font-paraMD);
+  letter-spacing: 1px;
+}
+
+.ratingTextBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.productTitleBuyProductPage {
+  font-size: var(--Imprint-font-headLG);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.priceRowBuyProductPage {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.oldPriceBuyProductPage {
+  font-size: var(--Imprint-font-paraLG);
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.newPriceBuyProductPage {
+  font-size: var(--Imprint-font-headMD);
+  font-weight: 700;
+  color: #e5484d;
+}
+
+.discountBadgeBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  font-weight: 700;
+  color: var(--Imprint-black);
+  background: #EEE6DA;
+  border-radius: 999px;
+  border: 3px solid var(--Imprint-brown);
+  padding: 0.1rem 0.95rem;
+}
+
+.stockTextBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--Imprint-black);
+  margin-bottom: 0.65rem;
+}
+
+.dividerBuyProductPage {
+  height: 1px;
+  width: 100%;
+  background: #e5e7eb;
+  margin-bottom: 1.25rem;
+}
+
+.badgeRowBuyProductPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.badgeBoxBuyProductPage {
+  display: flex;
+  align-items: center;
+  background-color: var(--Imprint-brown);
+  gap: 0.6rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+}
+
+.badgeIconBuyProductPage {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.badgeTextGroupBuyProductPage {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.badgeTitleBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.badgeSubBuyProductPage {
+  font-size: var(--Imprint-font-paraEVSM);
+  color: var(--text-main);
+}
+
+.avatarRowBuyProductPage {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--Imprint-brown);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatarStackBuyProductPage {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.avatarImageBuyProductPage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  margin-left: -10px;
+}
+
+.avatarImageBuyProductPage:first-child {
+  margin-left: 0;
+}
+
+.avatarTextBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  color: var(--text-main);
+}
+
+.quantitySectionBuyProductPage {
+  margin-bottom: 1.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: end;
+  gap: 20px;
+}
+
+.quantityLabelBuyProductPage {
+  display: block;
+  font-size: var(--Imprint-font-paraESM);
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.quantityBoxBuyProductPage {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.quantityBtnBuyProductPage {
+  border: none;
+  background: #ffffff;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: background 0.2s ease;
+}
+
+.quantityBtnBuyProductPage:hover {
+  background: var(--Imprint-gray, #f4f4f5);
+}
+
+.quantityValueBuyProductPage {
+  width: 48px;
+  text-align: center;
+  font-size: var(--Imprint-font-paraMD);
+  font-weight: 600;
+  border-left: 1px solid var(--Imprint-brown);
+  border-right: 1px solid var(--Imprint-brown);
+  padding: 0.5rem 0;
+  background-color: white;
+}
+
+.paymentRowBuyProductPage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.paymentBadgeBuyProductPage {
+  height: 25px;
+  min-width: 42px;
+  border-radius: 3px;
+  border: 1px solid var(--Imprint-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0 0.1rem;
+  color: #ffffff;
+}
+
+.featureIconBuyProductPage svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+  fill: currentColor;
+}
+
+.visaBadgeBuyProductPage {
+  background: #1a1f71;
+}
+
+.mastercardBadgeBuyProductPage {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  position: relative;
+  gap: 2px;
+}
+
+.mcCircleOneBuyProductPage,
+.mcCircleTwoBuyProductPage {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.mcCircleOneBuyProductPage {
+  background: #eb001b;
+  margin-right: -5px;
+}
+
+.mcCircleTwoBuyProductPage {
+  background: #f79e1b;
+  opacity: 0.9;
+}
+
+.paypalBadgeBuyProductPage {
+  background: #003087;
+}
+
+.applePayBadgeBuyProductPage {
+  background: #000000;
+}
+
+.shopBadgeBuyProductPage {
+  background: #5a31f4;
+}
+
+.gpayBadgeBuyProductPage {
+  background: #ffffff;
+  color: var(--text-main);
+  border-color: #e5e7eb;
+}
+
+.addtocartbuttonbuyproductpagemain {
+  width: 100%;
+}
+
+.addToCartBtnBuyProductPage {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  flex: 1;
+  font-size: var(--Imprint-font-paraSM);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 10px;
+  border: 1.5px solid var(--text-main);
+  background: #ffffff;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.addToCartBtnBuyProductPage:hover {
+  background: var(--text-main);
+  color: #ffffff;
+}
+
+.buyNowBtnBuyProductPage {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  font-size: var(--Imprint-font-paraSM);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 10px;
+  border: none;
+  background: var(--Imprint-black, #111111);
+  color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  transition: opacity 0.25s ease, transform 0.15s ease;
+}
+
+.buyNowBtnBuyProductPage:hover {
+  opacity: 0.85;
+}
+
+.buyNowBtnBuyProductPage:active,
+.addToCartBtnBuyProductPage:active {
+  transform: scale(0.98);
+}
+
+.pickupRowBuyProductPage {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.pickupIconBuyProductPage {
+  color: #3f7d20;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pickupTextBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.viewStoreLinkBuyProductPage {
+  color: var(--text-main);
+  text-decoration: underline;
+}
+
+.featureRowBuyProductPage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  background: var(--Imprint-brown);
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.featurePillBuyProductPage {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  justify-content: center;
+  font-size: var(--Imprint-font-paraEVSM);
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.featureIconBuyProductPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+}
+
+.deliveryRowBuyProductPage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--Imprint-brown);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.deliveryBoxBuyProductPage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deliveryTextGroupBuyProductPage {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.deliveryLabelBuyProductPage {
+  font-size: var(--Imprint-font-paraEVSM);
+  color: var(--text-muted);
+}
+
+.deliveryValueBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.deliveryArrowBuyProductPage {
+  color: var(--text-muted);
+}
+
+.safeDeliveryCardBuyProductPage {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border: 1px solid var(--Imprint-brown);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.deliveryIconBuyProductPage svg {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  display: flex;
+}
+
+.safeDeliveryIconBuyProductPage {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.safeDeliveryTitleBuyProductPage {
+  font-size: var(--Imprint-font-headESM);
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+}
+
+.safeDeliveryDescBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.highlightTextBuyProductPage {
+  color: #d97706;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.qualityCardBuyProductPage {
+  background: var(--Imprint-gray, #f4f4f5);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.qualityHeaderBuyProductPage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.qualityTitleBuyProductPage {
+  font-size: var(--Imprint-font-headESM);
+  color: var(--text-main);
+}
+
+.qualityNavBuyProductPage {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.qualityNavBtnBuyProductPage {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--Imprint-brown);
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-main);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.qualityNavBtnBuyProductPage:hover {
+  background: var(--text-main);
+  color: #ffffff;
+  border-color: var(--text-main);
+}
+
+.qualityTextBuyProductPage {
+  font-size: var(--Imprint-font-paraESM);
+  color: var(--text-muted);
+}
+
+.descriptionSectionBuyProductPage {
+  width: 100%;
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--Imprint-brown);
+  padding-top: 2.5rem;
+}
+
+.descriptionInnerBuyProductPage {
+  max-width: 900px;
+}
+
+.descriptionParaBuyProductPage {
+  font-size: var(--Imprint-font-paraMD);
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.specGroupBuyProductPage {
+  margin-top: 1.5rem;
+}
+
+.specHeadingBuyProductPage {
+  font-size: var(--Imprint-font-headESM);
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.specValueBuyProductPage {
+  font-size: var(--Imprint-font-paraMD);
+  color: var(--Imprint-blue, #0056b3);
+}
+
+.sliderTrackBuyProductPage {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.sliderTrackBuyProductPage:active {
+  cursor: grabbing;
+}
+
+.sliderSlideBuyProductPage {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.sliderArrowBuyProductPage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-main, #111111);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.sliderArrowBuyProductPage:hover {
+  background: #ffffff;
+}
+
+.sliderArrowBuyProductPage:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.sliderArrowPrevBuyProductPage {
+  left: 12px;
+}
+
+.sliderArrowNextBuyProductPage {
+  right: 12px;
+}
+@media (max-width: 992px) {
+  .topSectionBuyProductPage {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .quantitySectionBuyProductPage {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .gallerySectionBuyProductPage {
+    position: static;
+  }
+  
+  .mainImageBuyProductPage {
+    aspect-ratio: 12 / 8;
+    display: grid;
+  }
+
+  .galleryRowBuyProductPage {
+    flex-direction: row; /* pehle column-reverse tha */
+  }
+
+  .verticalThumbColumnBuyProductPage {
+    flex-direction: column;
+    /* width: 100%; */
+    justify-content: start;
+    width: 94px;
+    margin-bottom: 0.75rem; /* thumbs aur slider ke darmiyan thora gap */
+  }
+
+  .verticalThumbItemBuyProductPage {
+    width: 94px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .pageWrapperBuyProductPage {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .productTitleBuyProductPage {
+    font-size: 24px;
+  }
+
+  .newPriceBuyProductPage {
+    font-size: 20px;
+  }
+
+  .badgeRowBuyProductPage {
+    grid-template-columns: 1fr;
+  }
+    .verticalThumbColumnBuyProductPage {
+    flex-direction: column;
+    /* width: 100%; */
+    justify-content: start;
+    width: 64px;
+    margin-bottom: 0.75rem; /* thumbs aur slider ke darmiyan thora gap */
+  }
+
+  .verticalThumbItemBuyProductPage {
+    width: 64px;
+    flex-shrink: 0;
+  }
+  .mainImageBuyProductPage {
+    aspect-ratio: 4 / 5;
+  }
+  
+  .deliveryRowBuyProductPage {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .featureRowBuyProductPage {
+    justify-content: space-between;
+  }
+}
+

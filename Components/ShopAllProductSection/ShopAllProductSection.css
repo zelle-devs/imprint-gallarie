@@ -1,0 +1,209 @@
+.containerShopAllProductSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: var(--font-poppins), 'Montserrat', sans-serif;
+}
+
+.gridShopAllProductSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.cardShopAllProductSection {
+  background-color: var(--Imprint-white, #ffffff);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 1.4s ease;
+  cursor: pointer;
+}
+
+.cardShopAllProductSection:hover {
+  transform: translateY(-4px) rotate(0.8deg);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imageWrapperShopAllProductSection {
+  position: relative;
+  width: 100%;
+  max-height: 320px;
+  aspect-ratio: 4 / 5;
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+.imageWrapperShopAllProductSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 1.4s ease-in-out;
+  z-index: 2;
+}
+
+.cardShopAllProductSection:hover .imageWrapperShopAllProductSection::before {
+  left: 150%;
+}
+
+.productImgShopAllProductSection {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.cardShopAllProductSection:hover .productImgShopAllProductSection {
+  transform: scale(1.12);
+}
+
+.badgeShopAllProductSection {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.5px;
+  z-index: 3;
+}
+
+.contentShopAllProductSection {
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 200px;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.titleShopAllProductSection {
+  font-size: var(--Imprint-font-paraMD, 16px);
+  color: var(--text-main, #111827);
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.cardShopAllProductSection:hover .titleShopAllProductSection {
+  text-decoration: underline;
+}
+
+.brandShopAllProductSection {
+  font-size: 11px;
+  color: var(--text-muted, #9ca3af);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+.priceRowShopAllProductSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.oldPriceShopAllProductSection {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: #e11d48;
+  text-decoration: line-through;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.newPriceShopAllProductSection {
+  font-size: var(--Imprint-font-paraMD, 16px);
+  color: var(--text-main, #111827);
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+.addBtnShopAllProductSection {
+  width: 100%;
+  background-color: #2d2b36;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: var(--Imprint-font-headSM, 14px);
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.2s ease;
+}
+
+.addBtnShopAllProductSection:hover {
+  background-color: #1a191f;
+}
+
+@media (max-width: 992px) {
+  .gridShopAllProductSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .cardShopAllProductSection{
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: 576px) {
+  .gridShopAllProductSection {
+    grid-template-columns:repeat(2, 1fr);
+    gap: 14px;
+  }
+  .addBtnShopAllProductSection{
+    font-size: var(--Imprint-font-paraEVSM);
+  }
+
+  .priceRowShopAllProductSection{
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    text-align: left;
+    align-items: start;
+    gap: 0px;
+    margin-bottom: 0px;
+  }
+
+  .titleShopAllProductSection{
+    font-size: var(--Imprint-font-paraESM);
+  }
+
+  .imageWrapperShopAllProductSection{
+    max-height: 180px;
+  }
+
+  .cardShopAllProductSection{
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .contentShopAllProductSection{
+    padding: 10px;
+
+  }
+}
