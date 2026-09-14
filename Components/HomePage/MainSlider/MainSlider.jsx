@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import './MainSlider.css';
  
 const images = [
-    "/ImprintHero1.jpg",
-    "/ImprintHero2.jpg",
-    "/ImprintHero3.jpg",
+    "/imprintHeroMain1.png",
+    // "/ImprintHero2.jpg",
+    // "/ImprintHero3.jpg",
     
 ];
 
@@ -37,7 +37,7 @@ function MainSlider() {
                 ></div>
             ))}
              
-            <div className="dotsWrapperMainSliderHomePage">
+            {/* <div className="dotsWrapperMainSliderHomePage">
                 {images.map((_, index) => (
                     <div
                         key={index}
@@ -45,7 +45,7 @@ function MainSlider() {
                         className={`dotMainSliderHomePage ${index === currentIndex ? 'activeDotMainSliderHomePage' : ''}`}
                     ></div>
                 ))}
-            </div>
+            </div> */}
         </div>
     );
 }

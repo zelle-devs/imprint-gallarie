@@ -1,6 +1,7 @@
 /* Header Wrapper */
 .BevoraMainHeader-wrapper {
-    background-color: var(--background-color, #ffffff);
+    /* background-color: var(--background-color, #ffffff); */
+    background-color: transparent;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,19 +9,15 @@
     font-family: var(--font-poppins, sans-serif);
     padding: 1rem 0;
     border-bottom: 1px solid var(--Imprint-gray);
-    position: sticky;
+    position: absolute;
+    margin-bottom: 0px;
     top: 0;
     z-index: 999;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 /* Blur + transparency ONLY jab scroll ho (sticky activate) */
-.BevoraMainHeader-wrapper.is-scrolled {
-    background-color: #e8e4dcd5;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
+
 
 .BevoraMainHeader-container {
     margin: 0 auto;
@@ -34,6 +31,7 @@
 .BevoraMainHeader-containerTop {
     width: 100%;
     display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: var(--Imprint-black);
@@ -85,8 +83,13 @@
 .BevoraMainHeader-logo {
     font-size: var(--Imprint-font-headLG);
     color: var(--Imprint-black);
+    font-family: var(--font-playfair);
     letter-spacing: -0.5px;
     line-height: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -97,6 +100,18 @@
 .BevoraMainHeader-logo span {
     font-weight: 300;
     margin-left: 4px;
+}
+
+.BevoraMainHeader-cart-button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
 }
 
 .BevoraMainHeader-actions {
@@ -158,7 +173,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-bottom: 10px;
+    gap: 30px;
 }
 
 .BevoraMainHeader-nav-link {
@@ -173,9 +188,6 @@
     color: var(--Imprint-blue);
 }
 
-/* ============================= */
-/* Hamburger toggle (mobile only) */
-/* ============================= */
 .BevoraMainHeader-hamburger {
     display: none;
     flex-direction: column;

@@ -1,0 +1,108 @@
+.sectionFacilitiesSection {
+  width: 100%;
+  background-color: var(--background-color, #F5F2EC);
+  padding: 40px 20px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.containerFacilitiesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemFacilitiesSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.itemFacilitiesSection:last-child {
+  border-right: none;
+}
+
+.iconFacilitiesSection {
+  color: var(--text-main, #2A2A2A);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.titleFacilitiesSection {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: var(--text-main, #2A2A2A);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.subtitleFacilitiesSection {
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  font-size: 11px;
+  color: var(--text-muted, #7A8B6E);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .containerFacilitiesSection {
+    flex-wrap: wrap;
+    gap: 30px 0;
+  }
+  
+  .itemFacilitiesSection {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .itemFacilitiesSection:nth-child(2) {
+    border-right: none;
+  }
+  
+  .itemFacilitiesSection:nth-child(1),
+  .itemFacilitiesSection:nth-child(2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+  }
+  
+  .itemFacilitiesSection:nth-child(3),
+  .itemFacilitiesSection:nth-child(4) {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .containerFacilitiesSection {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .itemFacilitiesSection {
+    flex: 0 0 100%;
+    width: 100%;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+  
+  .itemFacilitiesSection:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+  
+  .itemFacilitiesSection:first-child {
+    padding-top: 10px;
+  }
+}

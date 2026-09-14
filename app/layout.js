@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.variable} ${montserrat.variable} ${playfair.variable}`}>
       <body>
         <main className="MainContainerImprintDecor">
-         <Header/>
+          <Header/>
           {children}
           <Footer/>
         </main>

@@ -1,0 +1,169 @@
+.containerProductPageSlider {
+  width: 100%;
+  background-color: var(--background-color, #F5F2EC);
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  padding: 0px 0;
+}
+
+.bgContainerProductPageSlider {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background-image: url('https://picsum.photos/1920/600?random=1101');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlayProductPageSlider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.contentProductPageSlider {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftColProductPageSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.subtitleProductPageSlider {
+  font-size: 11px;
+  color: var(--Imprint-gold, #C8B093);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.titleProductPageSlider {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+}
+
+.descProductPageSlider {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 20px 0 24px 0;
+  font-weight: 300;
+}
+
+.dividerProductPageSlider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+.breadcrumbProductPageSlider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+}
+
+.crumbLinkProductPageSlider {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.crumbLinkProductPageSlider:hover {
+  color: #ffffff;
+}
+
+.crumbSeparatorProductPageSlider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+}
+
+.crumbCurrentProductPageSlider {
+  color: #ffffff;
+}
+
+.rightColProductPageSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-right: 40px;
+}
+
+.rightTextItemProductPageSlider {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .titleProductPageSlider {
+    font-size: 42px;
+  }
+  
+  .overlayProductPageSlider {
+    background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .contentProductPageSlider {
+    padding: 50px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .bgContainerProductPageSlider {
+    border-top-left-radius: 0;
+  }
+
+  .rightColProductPageSlider {
+    display: none;
+  }
+  
+  .overlayProductPageSlider {
+    background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 100%);
+  }
+}
+
+@media (max-width: 576px) {
+  .titleProductPageSlider {
+    font-size: 34px;
+  }
+  
+  .descProductPageSlider {
+    font-size: var(--Imprint-font-paraESM, 12px);
+  }
+  
+  .bgContainerProductPageSlider {
+    min-height: 400px;
+  }
+}

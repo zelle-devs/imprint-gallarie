@@ -1,0 +1,147 @@
+.sectionItsFeelingLongSection {
+  width: 100%;
+  background-color: var(--Imprint-black, #2A2A2A);
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+}
+
+.bgContainerItsFeelingLongSection {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  background-image: url('https://picsum.photos/1920/600?random=1601');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.overlayItsFeelingLongSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.7) 45%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: 1;
+}
+
+.contentItsFeelingLongSection {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.textWrapperItsFeelingLongSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 500px;
+}
+
+.subtitleItsFeelingLongSection {
+  font-size: 10px;
+  color: var(--Imprint-gold, #C8B093);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.titleItsFeelingLongSection {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.descItsFeelingLongSection {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 300;
+}
+
+.btnItsFeelingLongSection {
+  background-color: transparent;
+  color: var(--Imprint-gold, #C8B093);
+  border: 1px solid var(--Imprint-gold, #C8B093);
+  padding: 12px 28px;
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btnItsFeelingLongSection:hover {
+  background-color: var(--Imprint-gold, #C8B093);
+  color: var(--Imprint-black, #2A2A2A);
+}
+
+.arrowItsFeelingLongSection {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.btnItsFeelingLongSection:hover .arrowItsFeelingLongSection {
+  transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+  .bgContainerItsFeelingLongSection {
+    min-height: 340px;
+  }
+  
+  .contentItsFeelingLongSection {
+    padding: 40px;
+  }
+  
+  .titleItsFeelingLongSection {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bgContainerItsFeelingLongSection {
+    min-height: 300px;
+  }
+  
+  .contentItsFeelingLongSection {
+    padding: 40px 20px;
+  }
+  
+  .overlayItsFeelingLongSection {
+    background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.85) 60%, rgba(0, 0, 0, 0.4) 100%);
+  }
+  
+  .titleItsFeelingLongSection {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 576px) {
+  .titleItsFeelingLongSection {
+    font-size: 28px;
+  }
+  
+  .btnItsFeelingLongSection {
+    padding: 10px 20px;
+  }
+}

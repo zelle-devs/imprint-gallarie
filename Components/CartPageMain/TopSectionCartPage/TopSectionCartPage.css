@@ -1,0 +1,482 @@
+.sectionTopSectionCartPage {
+  width: 100%;
+  background-color: var(--background-color, #F5F2EC);
+  padding: 40px 20px 80px 20px;
+  box-sizing: border-box;
+  margin-top: 80px;
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  color: var(--text-main, #2A2A2A);
+}
+
+.containerTopSectionCartPage {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.topHeaderTopSectionCartPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.headerLeftTopSectionCartPage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subtitleTopSectionCartPage {
+  font-size: 10px;
+  color: var(--text-muted, #7A8B6E);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.titleTopSectionCartPage {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--Imprint-font-headLG, 32px);
+  color: var(--text-main, #2A2A2A);
+  font-weight: 400;
+  margin: 0;
+}
+
+.descTopSectionCartPage {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: var(--text-main, #2A2A2A);
+  margin: 0;
+}
+
+.headerRightTopSectionCartPage {
+  margin-top: 10px;
+}
+
+.continueShoppingTopSectionCartPage {
+  font-size: 11px;
+  color: var(--text-main, #2A2A2A);
+  text-decoration: underline;
+  font-weight: 500;
+  text-underline-offset: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.continueShoppingTopSectionCartPage:hover {
+  opacity: 0.7;
+}
+
+.contentWrapperTopSectionCartPage {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.leftColTopSectionCartPage {
+  flex: 1.8;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartTableTopSectionCartPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeaderTopSectionCartPage {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr 1.2fr 1fr 30px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main, #2A2A2A);
+}
+
+.tableBodyTopSectionCartPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartRowTopSectionCartPage {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr 1.2fr 1fr 30px;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tdProductTopSectionCartPage {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.productImageWrapperTopSectionCartPage {
+  width: 90px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--Imprint-beige, #E7DCC5);
+  flex-shrink: 0;
+}
+
+.productImgTopSectionCartPage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.productInfoTopSectionCartPage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.productNameTopSectionCartPage {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--Imprint-font-headEVSM, 16px);
+  color: var(--text-main, #2A2A2A);
+  font-weight: 400;
+  margin: 0;
+}
+
+.productTypeTopSectionCartPage {
+  font-size: 10px;
+  color: var(--text-muted, #7A8B6E);
+  margin: 0;
+}
+
+.productDetailsListTopSectionCartPage {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  font-size: 10px;
+  color: var(--text-main, #2A2A2A);
+}
+
+.productDetailsListTopSectionCartPage li {
+  margin-bottom: 2px;
+}
+
+.editLinkTopSectionCartPage {
+  font-size: 10px;
+  color: var(--text-main, #2A2A2A);
+  text-decoration: underline;
+  margin-top: 4px;
+  text-underline-offset: 3px;
+}
+
+.tdPriceTopSectionCartPage,
+.tdTotalTopSectionCartPage {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: var(--text-main, #2A2A2A);
+  font-weight: 500;
+}
+
+.tdQtyTopSectionCartPage {
+  display: flex;
+  align-items: center;
+}
+
+.qtySelectorTopSectionCartPage {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.qtyBtnTopSectionCartPage {
+  background: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted, #7A8B6E);
+  font-size: 14px;
+}
+
+.qtyValTopSectionCartPage {
+  width: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-main, #2A2A2A);
+  font-weight: 500;
+}
+
+.tdActionTopSectionCartPage {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.removeBtnTopSectionCartPage {
+  background: transparent;
+  border: none;
+  color: var(--text-muted, #7A8B6E);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.removeBtnTopSectionCartPage:hover {
+  color: #e11d48;
+}
+
+.cartFooterTopSectionCartPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 24px;
+}
+
+.giftNoteTopSectionCartPage {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-main, #2A2A2A);
+  cursor: pointer;
+}
+
+.giftNoteTextTopSectionCartPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.giftNoteTitleTopSectionCartPage {
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.giftNoteSubTopSectionCartPage {
+  font-size: 11px;
+  color: var(--text-muted, #7A8B6E);
+  margin-top: 2px;
+}
+
+.clearCartLinkTopSectionCartPage {
+  font-size: 11px;
+  color: var(--text-main, #2A2A2A);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.clearCartLinkTopSectionCartPage:hover {
+  opacity: 0.7;
+}
+
+.rightColTopSectionCartPage {
+  flex: 1;
+  max-width: 380px;
+}
+
+.summaryBoxTopSectionCartPage {
+  background-color: #f1efe9; 
+  padding: 30px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryTitleTopSectionCartPage {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--Imprint-font-headSM, 20px);
+  font-weight: 400;
+  margin: 0 0 24px 0;
+  color: var(--text-main, #2A2A2A);
+}
+
+.summaryRowTopSectionCartPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-main, #2A2A2A);
+  margin-bottom: 12px;
+}
+
+.shippingNoteTopSectionCartPage {
+  font-size: 10px;
+  color: var(--text-muted, #7A8B6E);
+  margin-top: -8px;
+  margin-bottom: 20px;
+}
+
+.summaryDividerTopSectionCartPage {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.summaryTotalRowTopSectionCartPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-main, #2A2A2A);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.totalPriceTopSectionCartPage {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--Imprint-font-headESM, 18px);
+  font-weight: 600;
+}
+
+.checkoutBtnTopSectionCartPage {
+  width: 100%;
+  background-color: var(--Imprint-black, #2A2A2A);
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-size: 10px;
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutBtnTopSectionCartPage:hover {
+  background-color: #111;
+}
+
+.paymentOptionsTopSectionCartPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.paymentTextTopSectionCartPage {
+  font-size: 10px;
+  color: var(--text-muted, #7A8B6E);
+}
+
+.paymentButtonsTopSectionCartPage {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.payBtnTopSectionCartPage {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.payBtnTopSectionCartPage:hover {
+  border-color: var(--text-main, #2A2A2A);
+}
+
+.trustFeaturesTopSectionCartPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.trustItemTopSectionCartPage {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: var(--text-main, #2A2A2A);
+}
+
+.trustTextTopSectionCartPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.trustTitleTopSectionCartPage {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.trustDescTopSectionCartPage {
+  font-size: 10px;
+  color: var(--text-muted, #7A8B6E);
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .contentWrapperTopSectionCartPage {
+    flex-direction: column;
+  }
+  
+  .leftColTopSectionCartPage,
+  .rightColTopSectionCartPage {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableHeaderTopSectionCartPage {
+    display: none;
+  }
+  
+  .cartRowTopSectionCartPage {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .tdActionTopSectionCartPage {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+  
+  .tdPriceTopSectionCartPage,
+  .tdQtyTopSectionCartPage,
+  .tdTotalTopSectionCartPage {
+    justify-content: flex-start;
+    margin-left: 110px;
+  }
+  
+  .tdTotalTopSectionCartPage::before {
+    content: "Total: ";
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 8px;
+  }
+  
+  .topHeaderTopSectionCartPage {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .headerRightTopSectionCartPage {
+    margin-top: 0;
+  }
+}

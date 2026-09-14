@@ -1,0 +1,368 @@
+.sectionTopProductBuySection {
+  width: 100%;
+  background-color: var(--background-color, #F5F2EC);
+  padding: 60px 20px;
+  box-sizing: border-box;
+  margin-top: 80px;
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  color: var(--text-main, #2A2A2A);
+}
+
+.containerTopProductBuySection {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.leftColTopProductBuySection {
+  flex: 1.3;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnailsTopProductBuySection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 90px;
+  flex-shrink: 0;
+}
+
+.thumbWrapperTopProductBuySection {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 5;
+  cursor: pointer;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.activeThumbTopProductBuySection {
+  border-color: var(--text-main, #2A2A2A);
+}
+
+.thumbImgTopProductBuySection {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.playOverlayTopProductBuySection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.mainImageWrapperTopProductBuySection {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 5;
+  background-color: var(--Imprint-beige, #E7DCC5);
+  overflow: hidden;
+}
+
+.mainImgTopProductBuySection {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rightColTopProductBuySection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.headerInfoTopProductBuySection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.categoryTopProductBuySection {
+  font-size: 10px;
+  color: var(--text-muted, #7A8B6E);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.titleTopProductBuySection {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: var(--text-main, #2A2A2A);
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subtitleTopProductBuySection {
+  font-size: 14px;
+  color: var(--text-main, #2A2A2A);
+  font-weight: 500;
+  margin: 0;
+}
+
+.descTopProductBuySection {
+  font-size: 12px;
+  color: var(--text-muted, #7A8B6E);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.priceTopProductBuySection {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-main, #2A2A2A);
+  margin-top: 4px;
+}
+
+.reviewsTopProductBuySection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.starsTopProductBuySection {
+  display: flex;
+  align-items: center;
+}
+
+.reviewTextTopProductBuySection {
+  font-size: 12px;
+  color: var(--text-muted, #7A8B6E);
+}
+
+.dividerTopProductBuySection {
+  width: 100%;
+  height: 1px;
+  background-color: #d1d5db;
+  margin: 24px 0;
+}
+
+.formTopProductBuySection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.inputGroupTopProductBuySection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.labelTopProductBuySection {
+  font-size: 12px;
+  color: var(--text-main, #2A2A2A);
+  font-weight: 500;
+}
+
+.selectWrapperTopProductBuySection {
+  position: relative;
+  width: 100%;
+}
+
+.selectTopProductBuySection {
+  width: 100%;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  padding: 14px 16px;
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  font-size: 13px;
+  color: var(--text-main, #2A2A2A);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.selectTopProductBuySection:focus {
+  border-color: var(--text-main, #2A2A2A);
+}
+
+.selectIconTopProductBuySection {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-muted, #7A8B6E);
+}
+
+.swatchesTopProductBuySection {
+  display: flex;
+  gap: 12px;
+}
+
+.swatchOuterTopProductBuySection {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.activeSwatchTopProductBuySection {
+  border-color: var(--text-main, #2A2A2A);
+}
+
+.swatchInnerTopProductBuySection {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.textInputWrapperTopProductBuySection {
+  position: relative;
+  width: 100%;
+}
+
+.textInputTopProductBuySection {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  padding: 14px 16px;
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  font-size: 14px;
+  color: var(--text-main, #2A2A2A);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.textInputTopProductBuySection:focus {
+  border-color: var(--text-main, #2A2A2A);
+}
+
+.charCountTopProductBuySection {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  font-size: 11px;
+  color: var(--text-muted, #7A8B6E);
+  pointer-events: none;
+}
+
+.inputHintTopProductBuySection {
+  font-size: 11px;
+  color: var(--text-muted, #7A8B6E);
+  margin: 0;
+}
+
+.addToCartBtnTopProductBuySection {
+  width: 100%;
+  background-color: var(--Imprint-black, #2A2A2A);
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.addToCartBtnTopProductBuySection:hover {
+  background-color: #1a1a1a;
+}
+
+.cartArrowTopProductBuySection {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.addToCartBtnTopProductBuySection:hover .cartArrowTopProductBuySection {
+  transform: translateX(4px);
+}
+
+.trustBadgesTopProductBuySection {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d1d5db;
+  padding-top: 24px;
+}
+
+.badgeItemTopProductBuySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  color: var(--text-main, #2A2A2A);
+  flex: 1;
+}
+
+.badgeTextTopProductBuySection {
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--text-muted, #7A8B6E);
+}
+
+@media (max-width: 1024px) {
+  .containerTopProductBuySection {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .leftColTopProductBuySection {
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .rightColTopProductBuySection {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftColTopProductBuySection {
+    flex-direction: column-reverse;
+  }
+  
+  .thumbnailsTopProductBuySection {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  
+  .thumbWrapperTopProductBuySection {
+    width: 80px;
+    flex-shrink: 0;
+  }
+  
+  .titleTopProductBuySection {
+    font-size: 32px;
+  }
+}

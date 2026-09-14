@@ -7,10 +7,10 @@ import { useRouter } from 'next/navigation';
 function Header() {
     const router = useRouter();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-     const [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     // Lock body scroll while drawer is open
 
-     useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
         };
@@ -36,16 +36,13 @@ function Header() {
     };
 
     const navLinks = [
-        { href: '#new', label: 'New' },
-        { href: '#home', label: 'For the Home' },
-        { href: '#office', label: 'Office' },
-        { href: '#tech', label: 'Tech' },
-        { href: '#apparel', label: 'Apparel & Accessories' },
-        { href: '#prints', label: 'Prints & Artists' },
-        { href: '#books', label: 'Books' },
-        { href: '#kids', label: 'Kids & Games' },
+        { href: '/shop-all-products', label: 'Collection' },
+        { href: '#about', label: 'Office' },
+        { href: '#custom', label: 'Custom' },
+        { href: '#journal', label: 'Journal' },
+        { href: '#contact', label: 'Contact' },
         { href: '/shop-all-products', label: 'Only at Imprint' },
-        { href: '#gifts', label: 'Gifts' },
+
         { href: '#sale', label: 'Sale' },
     ];
 
@@ -86,49 +83,75 @@ function Header() {
                         </button>
 
                         <div className="BevoraMainHeader-logo" onClick={() => router.push('/')}>
-                            <strong>Imprint</strong> <span>Gallary</span>
-                        </div>
+                            <div>
+                                <strong>Imprint</strong> <span>Gallary</span>
 
-                        <div className="BevoraMainHeader-actions">
-
-                            <div className="BevoraMainHeader-search-container">
-                                <input
-                                    type="text"
-                                    placeholder="Search"
-                                    className="BevoraMainHeader-search-input"
-                                />
-                                <svg className="BevoraMainHeader-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
+                            </div>
+                            <div>
+                                <nav className="BevoraMainHeader-nav">
+                                    {navLinks.map((link) => (
+                                        <a key={link.href} href={link.href} className="BevoraMainHeader-nav-link">
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </nav>
                             </div>
 
-                            <div className="BevoraMainHeader-icons">
+                            <div className="BevoraMainHeader-actions">
 
-                                <svg className="BevoraMainHeader-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
-                                <svg className="BevoraMainHeader-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                </svg>
-                                <svg className="BevoraMainHeader-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <circle cx="9" cy="21" r="1"></circle>
-                                    <circle cx="20" cy="21" r="1"></circle>
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                </svg>
+                                <div className="BevoraMainHeader-search-container">
+                                    <input
+                                        type="text"
+                                        placeholder="Search"
+                                        className="BevoraMainHeader-search-input"
+                                    />
+                                    <svg className="BevoraMainHeader-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg>
+                                </div>
+
+                                <div className="BevoraMainHeader-icons">
+
+                                    <svg className="BevoraMainHeader-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <svg className="BevoraMainHeader-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                    <button
+                                        type="button"
+                                        className="BevoraMainHeader-cart-button"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            router.push('/cart');
+                                        }}
+                                        aria-label="Go to cart"
+                                    >
+                                        <svg
+                                            className="BevoraMainHeader-icon"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="1.5"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
 
                     {/* Desktop nav */}
-                    <nav className="BevoraMainHeader-nav">
-                        {navLinks.map((link) => (
-                            <a key={link.href} href={link.href} className="BevoraMainHeader-nav-link">
-                                {link.label}
-                            </a>
-                        ))}
-                    </nav>
+
 
                 </div>
 
