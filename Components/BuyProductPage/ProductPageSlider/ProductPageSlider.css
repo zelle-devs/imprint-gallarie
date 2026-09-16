@@ -8,10 +8,10 @@
 .bgContainerProductPageSlider {
   position: relative;
   width: 100%;
-  min-height: 500px;
-  background-image: url('https://picsum.photos/1920/600?random=1101');
+  min-height: 550px;
+  background-image: url('../../../public/TopBannerOnlyAtImprint.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -86,6 +86,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  display: none;
   font-size: 11px;
 }
 
@@ -112,6 +113,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  display: none;
   gap: 8px;
   margin-right: 40px;
 }

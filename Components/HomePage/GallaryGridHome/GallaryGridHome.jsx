@@ -5,33 +5,33 @@ function GallaryGridHome() {
   const collectionsGallaryGridHome = [
     {
       id: 1,
-      title: "Textured Wall Decor",
-      img: "https://picsum.photos/400/400?random=301"
+      title: "Premium Cases",
+      img: "/PremiumCasesCategoryHome.jpeg"
     },
     {
       id: 2,
-      title: "LED Wall Decor",
-      img: "https://picsum.photos/400/400?random=302"
+      title: "Designer Wallets",
+      img: "/WalletsCategoryHome.jpeg"
     },
     {
       id: 3,
-      title: "Islamic Calligraphy",
-      img: "https://picsum.photos/400/400?random=303"
+      title: "Designer Bottles",
+      img: "/DesignerBottlesCategoryHome.jpeg"
     },
     {
       id: 4,
-      title: "Metal Wall Decor",
-      img: "https://picsum.photos/400/400?random=304"
+      title: "Coffee Mugs",
+      img: "/CoffeeMugsCategoryHome.jpeg"
     },
     {
       id: 5,
-      title: "Metal Wall Clocks",
-      img: "https://picsum.photos/400/400?random=305"
+      title: "Printed Wall Art",
+      img: "/PrintedWallArtsCategoryHome.jpeg"
     },
     {
       id: 6,
-      title: "Neon Wall Decor",
-      img: "https://picsum.photos/400/400?random=306"
+      title: "Designer Wall Clocks",
+      img: "/DesignerWallClocksCategoryHome.jpeg"
     }
   ];
 

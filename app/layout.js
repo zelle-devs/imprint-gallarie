@@ -1,7 +1,9 @@
 import { Poppins, Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Header from "../Components/Header/Header" 
-import Footer from "../Components/Footer/Footer" 
+import Header from "../Components/Header/Header";
+import Footer from "../Components/Footer/Footer";
+import CartSidebar from "@/Components/ProductArchivePage/CartSidebar/CartSidebar";
+import { CartProvider } from "./CartContext";  
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -15,11 +17,10 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
-
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], 
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -29,13 +30,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // Added playfair.variable to the className list
     <html lang="en" className={`${poppins.variable} ${montserrat.variable} ${playfair.variable}`}>
       <body>
-        <main className="MainContainerImprintDecor">
-          <Header/>
-          {children}
-          <Footer/>
+        <main className="MainContainerImprintDecor"> 
+            <CartProvider>
+              <Header /> 
+              {children}
+              <Footer />
+              <CartSidebar />
+            </CartProvider> 
         </main>
       </body>
     </html>

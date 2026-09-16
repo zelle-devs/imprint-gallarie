@@ -12,7 +12,7 @@ function TopSectionCartPage() {
       price: "PKR 6,500",
       qty: 1,
       total: "PKR 6,500",
-      img: "https://picsum.photos/400/500?random=1801"
+      img: "/PhoneCaseProduct1.jpg"
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ function TopSectionCartPage() {
       price: "PKR 5,900",
       qty: 1,
       total: "PKR 5,900",
-      img: "https://picsum.photos/400/500?random=1802"
+      img: "/DesignerBottlesCategoryHome.jpeg"
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ function TopSectionCartPage() {
       price: "PKR 4,200",
       qty: 1,
       total: "PKR 4,200",
-      img: "https://picsum.photos/400/500?random=1803"
+      img: "/CoffeeMugsCategoryHome.jpeg"
     }
   ]);
 

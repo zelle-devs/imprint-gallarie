@@ -2,14 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import { useRouter } from 'next/navigation';
-
+import { useRouter, usePathname } from 'next/navigation';
+import { useCartCartSidebar } from '@/app/CartContext';
 function Header() {
     const router = useRouter();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    // Lock body scroll while drawer is open
-
+    const pathname = usePathname();
+    const isHome = pathname === '/';
+    const { openCartSidebar } = useCartCartSidebar();
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
@@ -36,7 +37,7 @@ function Header() {
     };
 
     const navLinks = [
-        { href: '/shop-all-products', label: 'Collection' },
+        { href: '#collection', label: 'Collection' },
         { href: '#about', label: 'Office' },
         { href: '#custom', label: 'Custom' },
         { href: '#journal', label: 'Journal' },
@@ -65,7 +66,7 @@ function Header() {
                 </div>
 
             </div>
-            <header className={`BevoraMainHeader-wrapper ${isScrolled ? 'is-scrolled' : ''}`}>
+            <header className={`BevoraMainHeader-wrapper ${isScrolled ? 'is-scrolled' : ''} ${isHome ? 'is-home' : ''}`}>
                 <div className="BevoraMainHeader-container">
 
                     <div className="BevoraMainHeader-top">
@@ -125,9 +126,9 @@ function Header() {
                                         className="BevoraMainHeader-cart-button"
                                         onClick={(e) => {
                                             e.stopPropagation();
-                                            router.push('/cart');
+                                            openCartSidebar();
                                         }}
-                                        aria-label="Go to cart"
+                                        aria-label="Open cart"
                                     >
                                         <svg
                                             className="BevoraMainHeader-icon"

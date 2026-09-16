@@ -8,7 +8,7 @@
   position: relative;
   width: 100%;
   min-height: 380px;
-  background-image: url('https://picsum.photos/1920/600?random=1601');
+  background-image: url('../../../public/CustomDesignForYourSpace.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

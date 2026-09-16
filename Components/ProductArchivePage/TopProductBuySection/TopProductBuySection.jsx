@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import './TopProductBuySection.css';
+import { useCartCartSidebar } from '@/app/CartContext';
 
 function TopProductBuySection() {
   const [activeImageTopProductBuySection, setActiveImageTopProductBuySection] = useState(0);
@@ -8,12 +9,15 @@ function TopProductBuySection() {
   const [selectedFinishTopProductBuySection, setSelectedFinishTopProductBuySection] = useState('Black');
   const [personalizationTextTopProductBuySection, setPersonalizationTextTopProductBuySection] = useState('AR');
 
+  const { addItemCartSidebar } = useCartCartSidebar();
+
   const imagesTopProductBuySection = [
-    "https://picsum.photos/600/800?random=1501",
-    "https://picsum.photos/600/800?random=1502",
-    "https://picsum.photos/600/800?random=1503",
-    "https://picsum.photos/600/800?random=1504",
-    "https://picsum.photos/600/800?random=1505"
+    "/PhoneCaseProduct1.jpg",
+    "/ProductBuyPage1.jpg",
+    "/ProductBuyPage2.jpg",
+    "/ProductBuyPage3.jpg",
+    "/ProductBuyPage4.jpg",
+    "/ProductBuyPage1.jpg",
   ];
 
   const finishesTopProductBuySection = [
@@ -26,6 +30,39 @@ function TopProductBuySection() {
     if (e.target.value.length <= 5) {
       setPersonalizationTextTopProductBuySection(e.target.value);
     }
+  };
+
+  // Builds a dummy cart line from the current selections and adds it to the
+  // cart. The id is derived from the chosen device + finish + personalization
+  // so picking the same combination twice increases quantity instead of
+  // creating a duplicate row, while a different combination becomes its own row.
+  const handleAddToCartTopProductBuySection = () => {
+    const idCartSidebar = [
+      'midnight-marble',
+      selectedDeviceTopProductBuySection,
+      selectedFinishTopProductBuySection,
+      personalizationTextTopProductBuySection,
+    ]
+      .join('-')
+      .toLowerCase()
+      .replace(/\s+/g, '-');
+
+    const optionParts = [
+      selectedDeviceTopProductBuySection,
+      selectedFinishTopProductBuySection,
+    ];
+    if (personalizationTextTopProductBuySection) {
+      optionParts.push(`"${personalizationTextTopProductBuySection}"`);
+    }
+
+    addItemCartSidebar({
+      idCartSidebar,
+      titleCartSidebar: 'Midnight Marble',
+      optionsCartSidebar: optionParts.join(' · '),
+      priceCartSidebar: 6500,
+      imageCartSidebar: imagesTopProductBuySection[activeImageTopProductBuySection],
+      quantityCartSidebar: 1,
+    });
   };
 
   return (
@@ -139,7 +176,10 @@ function TopProductBuySection() {
 
           </div>
 
-          <button className="addToCartBtnTopProductBuySection">
+          <button
+            className="addToCartBtnTopProductBuySection"
+            onClick={handleAddToCartTopProductBuySection}
+          >
             ADD TO CART <span className="cartArrowTopProductBuySection">&rarr;</span>
           </button>
 

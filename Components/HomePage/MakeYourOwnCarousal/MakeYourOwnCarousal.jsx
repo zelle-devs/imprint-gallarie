@@ -45,8 +45,8 @@ function MakeYourOwnCarousal() {
 const dataMakeYourOwnCarousal = [
     {
       id: 1,
-      name: "Trinity Coffee Table",
-      imgUrl: "/Trrinity.jpg",
+      name: "Customized Printed Bottle",
+      imgUrl: "/CustomizedProductHome2.jpg",
       regularPrice: "Rs 1,441,430",
       currentPrice: "Rs 1,056,400",
       discountText: "- Sale 27% Off",
@@ -55,8 +55,8 @@ const dataMakeYourOwnCarousal = [
     },
     {
       id: 2,
-      name: "Parota Exterior U-shaped Sectio...",
-      imgUrl: "/Parota_Exterior.jpg",
+      name: "Customized Coffee Mugs",
+      imgUrl: "/CustomizedProductHome1.jpg",
       regularPrice: null,
       currentPrice: "Rs 2,474,200",
       discountText: "",
@@ -65,8 +65,8 @@ const dataMakeYourOwnCarousal = [
     },
     {
       id: 3,
-      name: "Flitch Mod Lounge Chair",
-      imgUrl: "/Flitch_Mod_Lounge_Chair.jpg",
+      name: "Customized Wall Clocks",
+      imgUrl: "/CustomizedProductHome3.jpg",
       regularPrice: null,
       currentPrice: "Rs 625,500",
       discountText: "",
@@ -75,8 +75,8 @@ const dataMakeYourOwnCarousal = [
     },
     {
       id: 4,
-      name: "Milo Sofa",
-      imgUrl: "/Milo_Sofa.jpg",
+      name: "Customized Wallets",
+      imgUrl: "/CustomizedProductHome5.jpg",
       regularPrice: null,
       currentPrice: "Rs 2,807,522",
       discountText: "",
@@ -85,44 +85,44 @@ const dataMakeYourOwnCarousal = [
     },
     {
       id: 5,
-      name: "Modern Accent Chair",
-      imgUrl: "/Modern_Accent_Chair.jpg",
+      name: "Customized Premium Phone Cases",
+      imgUrl: "/CustomizedProductHome4.jpg",
       regularPrice: "Rs 333,600",
       currentPrice: "Rs 249,922",
       discountText: "- Sale 25% Off",
       showFlash: false,
       freeShipping: false
     },
-    {
-      id: 6,
-      name: "Rustic Dining Table",
-      imgUrl: "/Rustic_Dining_Table.jpg",
-      regularPrice: null,
-      currentPrice: "Rs 403,100",
-      discountText: "",
-      showFlash: false,
-      freeShipping: false
-    },
-    {
-      id: 7,
-      name: "Minimalist Bookshelf",
-      imgUrl: "/Minimilist_bookshelf.jpg",
-      regularPrice: "Rs 166,800",
-      currentPrice: "Rs 125,100",
-      discountText: "- Sale 25% Off",
-      showFlash: false,
-      freeShipping: false
-    },
-    {
-      id: 8,
-      name: "Velvet Pouf Ottoman",
-      imgUrl: "/Velvet_Pouf_Ottoman.jpg",
-      regularPrice: null,
-      currentPrice: "Rs 33,360",
-      discountText: "",
-      showFlash: false,
-      freeShipping: false
-    },
+    // {
+    //   id: 6,
+    //   name: "Rustic Dining Table",
+    //   imgUrl: "/Rustic_Dining_Table.jpg",
+    //   regularPrice: null,
+    //   currentPrice: "Rs 403,100",
+    //   discountText: "",
+    //   showFlash: false,
+    //   freeShipping: false
+    // },
+    // {
+    //   id: 7,
+    //   name: "Minimalist Bookshelf",
+    //   imgUrl: "/Minimilist_bookshelf.jpg",
+    //   regularPrice: "Rs 166,800",
+    //   currentPrice: "Rs 125,100",
+    //   discountText: "- Sale 25% Off",
+    //   showFlash: false,
+    //   freeShipping: false
+    // },
+    // {
+    //   id: 8,
+    //   name: "Velvet Pouf Ottoman",
+    //   imgUrl: "/Velvet_Pouf_Ottoman.jpg",
+    //   regularPrice: null,
+    //   currentPrice: "Rs 33,360",
+    //   discountText: "",
+    //   showFlash: false,
+    //   freeShipping: false
+    // },
   ];
 
   return (
@@ -130,9 +130,9 @@ const dataMakeYourOwnCarousal = [
       <div className="headerMakeYourOwnCarousal">
         <div className="titleSectionMakeYourOwnCarousal">
           <p className="subTitleMakeYourOwnCarousal">MAKE IT YOUR OWN</p>
-          <h2 className="mainTitleMakeYourOwnCarousal">Customizable Furniture</h2>
+          <h2 className="mainTitleMakeYourOwnCarousal">Customizable Products </h2>
         </div>
-        <a href="/shop-all-products" className="moreLinkMakeYourOwnCarousal">More in Furniture</a>
+        <a href="/shop-all-products" className="moreLinkMakeYourOwnCarousal">More in Products</a>
       </div>
 
       <div className="carouselWrapperMakeYourOwnCarousal">

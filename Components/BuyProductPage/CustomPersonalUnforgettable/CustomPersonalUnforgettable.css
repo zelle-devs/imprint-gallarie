@@ -1,10 +1,10 @@
 .sectionCustomPersonalUnforgettable {
   position: relative;
   width: 100%;
-  min-height: 160px;
-  background-image: url('https://picsum.photos/1920/400?random=1305');
+  min-height: 190px;
+  background-image: url('../../../public/ProdcutPageBottomSection.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center -350px ;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;

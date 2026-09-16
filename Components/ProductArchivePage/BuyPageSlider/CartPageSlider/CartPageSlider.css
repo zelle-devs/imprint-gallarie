@@ -1,0 +1,171 @@
+.containerCartPageSlider {
+  width: 100%;
+  background-color: var(--background-color, #F5F2EC);
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  padding: 0px 0;
+}
+
+.bgContainerCartPageSlider {
+  position: relative;
+  width: 100%;
+  min-height: 70px;
+  background-image: url('../../../../public/CartPageSliderImageHeader.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlayCartPageSlider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.751) 0%, rgba(15, 15, 15, 0.751) 40%, rgba(15, 15, 15, 0.751) 100%);
+  z-index: 1;
+}
+
+.contentCartPageSlider {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftColCartPageSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.subtitleCartPageSlider {
+  font-size: 11px;
+  color: var(--Imprint-gold, #C8B093);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.titleCartPageSlider {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+}
+
+.descCartPageSlider {
+  font-size: var(--Imprint-font-paraSM, 14px);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 20px 0 24px 0;
+  font-weight: 300;
+}
+
+.dividerCartPageSlider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+.breadcrumbCartPageSlider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  display: none;
+  font-size: 11px;
+}
+
+.crumbLinkCartPageSlider {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.crumbLinkCartPageSlider:hover {
+  color: #ffffff;
+}
+
+.crumbSeparatorCartPageSlider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+}
+
+.crumbCurrentCartPageSlider {
+  color: #ffffff;
+}
+
+.rightColCartPageSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+  gap: 8px;
+  margin-right: 40px;
+}
+
+.rightTextItemCartPageSlider {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .titleCartPageSlider {
+    font-size: 42px;
+  }
+  
+  .overlayCartPageSlider {
+    background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .contentCartPageSlider {
+    padding: 50px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .bgContainerCartPageSlider {
+    border-top-left-radius: 0;
+  }
+
+  .rightColCartPageSlider {
+    display: none;
+  }
+  
+  .overlayCartPageSlider {
+    background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 100%);
+  }
+}
+
+@media (max-width: 576px) {
+  .titleCartPageSlider {
+    font-size: 34px;
+  }
+  
+  .descCartPageSlider {
+    font-size: var(--Imprint-font-paraESM, 12px);
+  }
+  
+  .bgContainerCartPageSlider {
+    min-height: 400px;
+  }
+}

@@ -8,7 +8,7 @@ function ArtForMoreMeaningfull() {
         
         <div className="leftColArtForMoreMeaningfull">
           <img 
-            src="https://picsum.photos/1000/600?random=901" 
+            src="./artformorehomeimage.png" 
             alt="Meaningful Art Interior" 
             className="leftImgArtForMoreMeaningfull" 
           />

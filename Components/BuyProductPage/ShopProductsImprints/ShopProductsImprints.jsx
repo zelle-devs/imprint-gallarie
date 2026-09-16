@@ -12,7 +12,7 @@ function ShopProductsImprints() {
       type: "Customizable Phone Case",
       price: "$ 65",
       colors: ["#D9C8B2", "#2A2A2A", "#555555"],
-      img: "https://picsum.photos/500/650?random=1201"
+      img: "/PhoneCaseProduct1.jpg"
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ function ShopProductsImprints() {
       type: "Customizable Phone Case",
       price: "$ 65",
       colors: ["#2C3E35", "#A67C52", "#2A2A2A"],
-      img: "https://picsum.photos/500/650?random=1202"
+      img: "/PhoneCaseProduct2.jpg"
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ function ShopProductsImprints() {
       type: "Customizable Phone Case",
       price: "$ 65",
       colors: ["#2A2A2A", "#D9C8B2", "#D3D3D3"],
-      img: "https://picsum.photos/500/650?random=1203"
+      img: "/PhoneCaseProduct3.jpg"
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ function ShopProductsImprints() {
       type: "Customizable Phone Case",
       price: "$ 65",
       colors: ["#E7DCC5", "#D9C8B2", "#2A2A2A"],
-      img: "https://picsum.photos/500/650?random=1204"
+      img: "/PhoneCaseProduct4.jpg"
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ function ShopProductsImprints() {
       type: "Customizable Phone Case",
       price: "$ 65",
       colors: ["#2A2A2A", "#1C2841", "#A67C52"],
-      img: "https://picsum.photos/500/650?random=1205"
+      img: "/PhoneCaseProduct5.jpg"
     },
     {
       id: 6,
@@ -52,7 +52,7 @@ function ShopProductsImprints() {
       type: "Customizable Phone Case",
       price: "$ 65",
       colors: ["#8B5A2B", "#D9C8B2", "#2A2A2A"],
-      img: "https://picsum.photos/500/650?random=1206"
+      img: "/PhoneCaseProduct6.jpg"
     }
   ];
 

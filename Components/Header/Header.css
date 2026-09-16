@@ -34,7 +34,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: var(--Imprint-black);
+    background-color: var(--background-color);
     font-family: var(--font-poppins, sans-serif);
 }
 
@@ -82,7 +82,7 @@
 /* Logo Styling */
 .BevoraMainHeader-logo {
     font-size: var(--Imprint-font-headLG);
-    color: var(--Imprint-black);
+    color: var(--background-color);
     font-family: var(--font-playfair);
     letter-spacing: -0.5px;
     line-height: 1;
@@ -123,7 +123,7 @@
 .BevoraMainHeader-search-container {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--Imprint-black);
+    border-bottom: 1px solid var(--background-color);
     padding-bottom: 5px;
     width: 250px;
 }
@@ -133,20 +133,20 @@
     outline: none;
     flex: 1;
     font-size: var(--Imprint-font-paraSM);
-    color: var(--Imprint-black);
+    color: var(--background-color);
     background: transparent;
     font-family: inherit;
 }
 
 .BevoraMainHeader-search-input::placeholder {
-    color: var(--text-main);
+    color: var(--background-color);
     font-weight: 400;
 }
 
 .BevoraMainHeader-icon-small {
     width: 16px;
     height: 10px;
-    color: var(--Imprint-black);
+    color: var(--background-color);
     cursor: pointer;
 }
 
@@ -159,7 +159,7 @@
 .BevoraMainHeader-icon {
     width: 24px;
     height: 24px;
-    color: var(--Imprint-black);
+    color: var(--background-color);
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
@@ -178,7 +178,7 @@
 
 .BevoraMainHeader-nav-link {
     text-decoration: none;
-    color: var(--Imprint-black);
+    color: var(--background-color);
     font-size: var(--Imprint-font-paraSM);
     font-weight: 600;
     transition: color 0.2s ease;
@@ -207,7 +207,7 @@
     display: block;
     width: 22px;
     height: 2px;
-    background-color: var(--Imprint-black);
+    background-color: var(--background-color);
     border-radius: 2px;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
 }
@@ -452,4 +452,26 @@
     .BevoraMainHeader-drawer-close {
         transition-duration: 0.01ms !important;
     }
+}
+
+
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-logo,
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-nav-link,
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-icon,
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-icon-small,
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-search-input {
+    color: var(--Imprint-black);
+}
+
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-search-container {
+    border-bottom-color: var(--Imprint-black);
+}
+
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-search-input::placeholder {
+    color: var(--Imprint-black);
+    opacity: 0.75;
+}
+
+.BevoraMainHeader-wrapper.is-home .BevoraMainHeader-hamburger span {
+    background-color: var(--Imprint-black);
 }

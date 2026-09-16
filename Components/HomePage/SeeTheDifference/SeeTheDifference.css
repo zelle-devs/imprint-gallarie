@@ -8,9 +8,9 @@
   position: relative;
   width: 100%;
   min-height: 180px;
-  background-image: url('https://picsum.photos/1920/800?random=801');
+  background-image: url('../../../public/SeeTheDiffrenceImageHome.png');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;

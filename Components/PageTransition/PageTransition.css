@@ -1,0 +1,48 @@
+.imprint-page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--text-main); /* Dark background (Walnut) for premium look */
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Shuru mein bottom par hoga */
+    transform: translateY(100%);
+    transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Jab screen par aana ho */
+.imprint-page-transition.step-slide-in,
+.imprint-page-transition.step-text-in,
+.imprint-page-transition.step-text-out {
+    transform: translateY(0);
+}
+
+/* Jese aya tha wese hi upar ki taraf nikal jayega (Huge Inc style) */
+.imprint-page-transition.step-slide-out {
+    transform: translateY(-100%); 
+}
+
+.transition-text {
+    font-family: var(--font-playfair), serif;
+    font-size: var(--Imprint-font-headLG);
+    color: var(--background-color); /* Light text */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+/* Text Fade In */
+.imprint-page-transition.step-text-in .transition-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text Fade Out */
+.imprint-page-transition.step-text-out .transition-text {
+    opacity: 0;
+    transform: translateY(-30px);
+}

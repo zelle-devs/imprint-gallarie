@@ -8,28 +8,28 @@ function ProductCollectionSection() {
       title: "Forest Green",
       subtitle: "Phone Case",
       price: "PKR 6,500",
-      img: "https://picsum.photos/400/500?random=1701"
+      img: "/PhoneCaseProduct2.jpg"
     },
     {
       id: 2,
       title: "Classic Sand",
       subtitle: "Phone Case",
       price: "PKR 6,500",
-      img: "https://picsum.photos/400/500?random=1702"
+      img: "/PhoneCaseProduct4.jpg"
     },
     {
       id: 3,
       title: "Contour",
       subtitle: "Phone Case",
       price: "PKR 6,500",
-      img: "https://picsum.photos/400/500?random=1703"
+      img: "/PhoneCaseProduct3.jpg"
     },
     {
       id: 4,
       title: "Vintage Brown",
       subtitle: "Phone Case",
       price: "PKR 6,500",
-      img: "https://picsum.photos/400/500?random=1704"
+      img: "/PhoneCaseProduct6.jpg"
     }
   ];
 

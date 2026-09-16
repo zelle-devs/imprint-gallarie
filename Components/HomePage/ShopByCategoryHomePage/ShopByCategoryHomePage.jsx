@@ -3,41 +3,41 @@ import React, { useState } from 'react';
 import './ShopByCategoryHomePage.css';
 
 function ShopByCategoryHomePage() {
-  const [activeTabShopByCategoryHomePage, setActiveTabShopByCategoryHomePage] = useState('bedroom');
+  const [activeTabShopByCategoryHomePage, setActiveTabShopByCategoryHomePage] = useState('personal');
 
   const dataShopByCategoryHomePage = [
     {
-      id: 'bedroom',
-      tabLabel: 'BEDROOM',
-      mainImg: '/Bedroom_Gallery_Home.jpg',
-      smallImg: '/Bedroom_Gallery_HomeSide.jpg',
+      id: 'personal',
+      tabLabel: 'PERSONAL',
+      mainImg: '/PersonalTabSectionImage.png',
+      smallImg: '/RightSideSmallImagePersonal.jpg',
       desc: 'Set the tone for sleep, style, and everything in between.',
-      btnText: 'SHOP BEDROOM'
+      btnText: 'SHOP PERSONAL'
     },
     {
-      id: 'bathroom',
-      tabLabel: 'BATHROOM',
-      mainImg: '/Bathroom_Gallary_Home.jpg',
-      smallImg: 'Bathroom_Gallary_HomeSide.jpg',
-      desc: 'Personalize your bathroom with the perfect splash of personality.',
-      btnText: 'SHOP BATHROOM'
+      id: 'home',
+      tabLabel: 'HOME',
+      mainImg: '/HomeTabSectionImage.png',
+      smallImg: '/RightSideSmallImageHome.jpg',
+      desc: 'Personalize your Home with the perfect splash of personality.',
+      btnText: 'SHOP HOME'
     },
-    {
-      id: 'office',
-      tabLabel: 'OFFICE',
-      mainImg: '/Office_Gallary_Home.jpg',
-      smallImg: '/Office_Gallary_HomeSide.jpg',
-      desc: 'Design a workspace that actually works for you.',
-      btnText: 'SHOP OFFICE'
-    },
-    {
-      id: 'livingroom',
-      tabLabel: 'LIVING ROOM',
-      mainImg: '/Livingroom_Gallary_Home.jpg',
-      smallImg: 'Livingroom_Gallary_HomeSide.jpg',
-      desc: 'Make your space the main event.',
-      btnText: 'SHOP LIVING ROOM'
-    }
+    // {
+    //   id: 'office',
+    //   tabLabel: 'OFFICE',
+    //   mainImg: '/Office_Gallary_Home.jpg',
+    //   smallImg: '/Office_Gallary_HomeSide.jpg',
+    //   desc: 'Design a workspace that actually works for you.',
+    //   btnText: 'SHOP OFFICE'
+    // },
+    // {
+    //   id: 'livingroom',
+    //   tabLabel: 'LIVING ROOM',
+    //   mainImg: '/Livingroom_Gallary_Home.jpg',
+    //   smallImg: 'Livingroom_Gallary_HomeSide.jpg',
+    //   desc: 'Make your space the main event.',
+    //   btnText: 'SHOP LIVING ROOM'
+    // }
   ];
 
   const currentDataShopByCategoryHomePage = dataShopByCategoryHomePage.find(
@@ -46,7 +46,7 @@ function ShopByCategoryHomePage() {
 
   return (
     <div className="containerShopByCategoryHomePage">
-      <h2 className="titleShopByCategoryHomePage">Shop By Room</h2>
+      <h2 className="titleShopByCategoryHomePage">Shop By Collection</h2>
       
       <div className="tabsWrapperShopByCategoryHomePage">
         <div className="tabsContainerShopByCategoryHomePage">
