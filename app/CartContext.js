@@ -1,69 +1,107 @@
 "use client"
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import ImprintLoader from '@/Components/ImprintLoader/ImprintLoader'; // <-- apna sahi path yahan lagao
 
 const CartContext = createContext(null);
 
 export function CartProvider({ children }) {
     const [cartItemsCartSidebar, setCartItemsCartSidebar] = useState([]);
     const [isOpenCartSidebar, setIsOpenCartSidebar] = useState(false);
+    const [isLoadedCartSidebar, setIsLoadedCartSidebar] = useState(false);
+    const [isCartLoadingCartSidebar, setIsCartLoadingCartSidebar] = useState(false); 
+
+    useEffect(() => {
+        const savedCart = localStorage.getItem('beyvora_cart');
+        if (savedCart) {
+            try {
+                setCartItemsCartSidebar(JSON.parse(savedCart));
+            } catch (error) {
+                setCartItemsCartSidebar([]);
+            }
+        }
+        setIsLoadedCartSidebar(true);
+    }, []);
+
+    useEffect(() => {
+        if (isLoadedCartSidebar) {
+            localStorage.setItem('beyvora_cart', JSON.stringify(cartItemsCartSidebar));
+        }
+    }, [cartItemsCartSidebar, isLoadedCartSidebar]);
 
     const openCartSidebar = () => setIsOpenCartSidebar(true);
     const closeCartSidebar = () => setIsOpenCartSidebar(false);
+
+    // 👇 Yahan delay ko 5000ms (5 seconds) kar diya hai
+    const runWithCartLoaderCartSidebar = (action, delay = 5000) => {
+        setIsCartLoadingCartSidebar(true);
+        setTimeout(() => {
+            action();
+            setIsCartLoadingCartSidebar(false);
+        }, delay);
+    };
+
     const addItemCartSidebar = (product) => {
-        setCartItemsCartSidebar((prevItems) => {
-            const existingItem = prevItems.find(
-                (item) => item.idCartSidebar === product.idCartSidebar
-            );
-
-            if (existingItem) {
-                return prevItems.map((item) =>
-                    item.idCartSidebar === product.idCartSidebar
-                        ? {
-                              ...item,
-                              quantityCartSidebar:
-                                  item.quantityCartSidebar +
-                                  (product.quantityCartSidebar || 1),
-                          }
-                        : item
+        runWithCartLoaderCartSidebar(() => {
+            setCartItemsCartSidebar((prevItems) => {
+                const existingItem = prevItems.find(
+                    (item) => item.idCartSidebar === product.idCartSidebar
                 );
-            }
 
-            return [
-                ...prevItems,
-                { ...product, quantityCartSidebar: product.quantityCartSidebar || 1 },
-            ];
+                if (existingItem) {
+                    return prevItems.map((item) =>
+                        item.idCartSidebar === product.idCartSidebar
+                            ? {
+                                  ...item,
+                                  quantityCartSidebar:
+                                      item.quantityCartSidebar +
+                                      (product.quantityCartSidebar || 1),
+                              }
+                            : item
+                    );
+                }
+
+                return [
+                    ...prevItems,
+                    { ...product, quantityCartSidebar: product.quantityCartSidebar || 1 },
+                ];
+            });
+
+            openCartSidebar(); 
         });
-
-        openCartSidebar();
     };
 
     const increaseItemCartSidebar = (id) => {
-        setCartItemsCartSidebar((prevItems) =>
-            prevItems.map((item) =>
-                item.idCartSidebar === id
-                    ? { ...item, quantityCartSidebar: item.quantityCartSidebar + 1 }
-                    : item
-            )
-        );
-    };
-
-    // Decreasing below 1 removes the item, matching common cart UX.
-    const decreaseItemCartSidebar = (id) => {
-        setCartItemsCartSidebar((prevItems) =>
-            prevItems
-                .map((item) =>
+        runWithCartLoaderCartSidebar(() => {
+            setCartItemsCartSidebar((prevItems) =>
+                prevItems.map((item) =>
                     item.idCartSidebar === id
-                        ? { ...item, quantityCartSidebar: item.quantityCartSidebar - 1 }
+                        ? { ...item, quantityCartSidebar: item.quantityCartSidebar + 1 }
                         : item
                 )
-                .filter((item) => item.quantityCartSidebar > 0)
-        );
+            );
+        });
+    };
+
+    const decreaseItemCartSidebar = (id) => {
+        runWithCartLoaderCartSidebar(() => {
+            setCartItemsCartSidebar((prevItems) =>
+                prevItems
+                    .map((item) =>
+                        item.idCartSidebar === id
+                            ? { ...item, quantityCartSidebar: item.quantityCartSidebar - 1 }
+                            : item
+                    )
+                    .filter((item) => item.quantityCartSidebar > 0)
+            );
+        });
     };
 
     const removeItemCartSidebar = (id) => {
-        setCartItemsCartSidebar((prevItems) =>
-            prevItems.filter((item) => item.idCartSidebar !== id)
-        );
+        runWithCartLoaderCartSidebar(() => {
+            setCartItemsCartSidebar((prevItems) =>
+                prevItems.filter((item) => item.idCartSidebar !== id)
+            );
+        });
     };
 
     return (
@@ -77,9 +115,12 @@ export function CartProvider({ children }) {
                 increaseItemCartSidebar,
                 decreaseItemCartSidebar,
                 removeItemCartSidebar,
+                isCartLoadingCartSidebar,        
+                runWithCartLoaderCartSidebar,    
             }}
         >
-            {children}
+            {isCartLoadingCartSidebar && <ImprintLoader label="Updating your cart" />}
+            {isLoadedCartSidebar ? children : null}
         </CartContext.Provider>
     );
 }

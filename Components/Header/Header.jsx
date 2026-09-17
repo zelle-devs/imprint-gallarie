@@ -4,21 +4,26 @@ import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { useRouter, usePathname } from 'next/navigation';
 import { useCartCartSidebar } from '@/app/CartContext';
+import { usePageTransition } from '@/app/TransitionContext';
+
 function Header() {
     const router = useRouter();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { navigate } = usePageTransition();
     const pathname = usePathname();
     const isHome = pathname === '/';
     const { openCartSidebar } = useCartCartSidebar();
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
         };
-        handleScroll(); // set correct state on mount (e.g. page refreshed mid-scroll)
+        handleScroll();
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
     useEffect(() => {
         if (isDrawerOpen) {
             document.body.style.overflow = 'hidden';
@@ -32,19 +37,19 @@ function Header() {
 
     const closeDrawer = () => setIsDrawerOpen(false);
 
-    const handleNavClick = () => {
+    const handleNavClick = (e, href, label) => {
+        e.preventDefault();
         closeDrawer();
+        navigate(href, label);
     };
 
     const navLinks = [
-        { href: '#collection', label: 'Collection' },
-        { href: '#about', label: 'Office' },
-        { href: '#custom', label: 'Custom' },
-        { href: '#journal', label: 'Journal' },
-        { href: '#contact', label: 'Contact' },
-        { href: '/shop-all-products', label: 'Only at Imprint' },
-
-        { href: '#sale', label: 'Sale' },
+        { href: '/shop-all-products', label: 'Premium Cases' },
+        { href: '/shop-all-products', label: 'Designer Wallets' },
+        { href: '/shop-all-products', label: 'Designer Bottles' },
+        { href: '/shop-all-products', label: 'Coffee Mugs' },
+        { href: '/shop-all-products', label: 'Printed Wall Art' },
+        { href: '/shop-all-products', label: 'Designer Wall Clocks' },
     ];
 
     return (
@@ -71,7 +76,6 @@ function Header() {
 
                     <div className="BevoraMainHeader-top">
 
-                        {/* Mobile hamburger toggle - visible only on mobile via CSS */}
                         <button
                             className={`BevoraMainHeader-hamburger ${isDrawerOpen ? 'is-active' : ''}`}
                             onClick={() => setIsDrawerOpen(true)}
@@ -84,19 +88,25 @@ function Header() {
                         </button>
 
                         <div className="BevoraMainHeader-logo" onClick={() => router.push('/')}>
-                            <div>
-                                <strong>Imprint</strong> <span>Gallary</span>
+                            <div >
+                                <strong>IMPRINT</strong> <br/><span>GALLARIA</span>
 
                             </div>
-                            <div>
-                                <nav className="BevoraMainHeader-nav">
-                                    {navLinks.map((link) => (
-                                        <a key={link.href} href={link.href} className="BevoraMainHeader-nav-link">
-                                            {link.label}
-                                        </a>
-                                    ))}
-                                </nav>
-                            </div>
+                            <nav className="BevoraMainHeader-nav">
+                                {navLinks.map((link) => (
+                                    <a
+                                        key={link.label}
+                                        href={link.href}
+                                        className="BevoraMainHeader-nav-link"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            navigate(link.href, link.label);
+                                        }}
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </nav>
 
                             <div className="BevoraMainHeader-actions">
 
@@ -151,22 +161,17 @@ function Header() {
 
                     </div>
 
-                    {/* Desktop nav */}
-
-
                 </div>
 
-                {/* Mobile drawer overlay */}
                 <div
                     className={`BevoraMainHeader-overlay ${isDrawerOpen ? 'is-visible' : ''}`}
                     onClick={closeDrawer}
                     aria-hidden="true"
                 ></div>
 
-                {/* Mobile drawer panel */}
                 <aside className={`BevoraMainHeader-drawer ${isDrawerOpen ? 'is-open' : ''}`}>
                     <div className="BevoraMainHeader-drawer-top">
-                        <div className="BevoraMainHeader-drawer-logo" onClick={() => router.push('/') == setIsDrawerOpen(false)}>
+                        <div className="BevoraMainHeader-drawer-logo" onClick={() => { router.push('/'); setIsDrawerOpen(false); }}>
                             <strong>Imprint</strong> <span>Gallary</span>
                         </div>
                         <button
@@ -196,10 +201,10 @@ function Header() {
                     <nav className="BevoraMainHeader-drawer-nav">
                         {navLinks.map((link, index) => (
                             <a
-                                key={link.href}
+                                key={link.href + index}
                                 href={link.href}
                                 className="BevoraMainHeader-drawer-nav-link"
-                                onClick={handleNavClick}
+                                onClick={(e) => handleNavClick(e, link.href, link.label)}
                                 style={{ transitionDelay: isDrawerOpen ? `${40 + index * 30}ms` : '0ms' }}
                             >
                                 {link.label}

@@ -16,6 +16,7 @@
 .cardShopProductsImprints {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   background-color: transparent;
 }
 
@@ -136,7 +137,7 @@
 
 @media (max-width: 576px) {
   .gridShopProductsImprints {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
 }

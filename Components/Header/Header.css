@@ -22,7 +22,8 @@
 .BevoraMainHeader-container {
     margin: 0 auto;
     padding: 0 1rem;
-    width: 90%;
+    padding: 0 1rem;
+    width: 95%;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -87,19 +88,32 @@
     letter-spacing: -0.5px;
     line-height: 1;
     display: flex;
+    gap: 10px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-transform: capitalize;
     cursor: pointer;
 }
 
 .BevoraMainHeader-logo strong {
     font-weight: 800;
+    text-transform: capitalize;
+    font-size: 40px;
 }
 
 .BevoraMainHeader-logo span {
     font-weight: 300;
     margin-left: 4px;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     letter-spacing: 5.5px;
+    font-family: var(--font-montserrat);
 }
 
 .BevoraMainHeader-cart-button {
@@ -125,6 +139,7 @@
     align-items: center;
     border-bottom: 1px solid var(--background-color);
     padding-bottom: 5px;
+    display: none;
     width: 250px;
 }
 
@@ -170,7 +185,7 @@
 
 .BevoraMainHeader-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 30px;
@@ -179,7 +194,7 @@
 .BevoraMainHeader-nav-link {
     text-decoration: none;
     color: var(--background-color);
-    font-size: var(--Imprint-font-paraSM);
+    font-size: var(--Imprint-font-paraMD);
     font-weight: 600;
     transition: color 0.2s ease;
 }
@@ -439,6 +454,18 @@
     /* Desktop nav is fully replaced by the drawer on mobile */
     .BevoraMainHeader-nav {
         display: none;
+    }
+    .BevoraMainHeader-logo strong {
+        font-size: 25px;
+    }
+    .BevoraMainHeader-logo span {
+        font-size: 10px;
+        margin-left: 0;
+    }
+    .BevoraMainHeader-logo{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 }
 

@@ -3,7 +3,8 @@
   width: 100%;
   font-family: var(--font-poppins), sans-serif;
   padding: 4rem 0 2rem 0;
-  height: 82vh;
+  padding-bottom: 2rem;
+  height: auto;
   color: var(--text-main);
   position: relative;
   overflow: hidden;

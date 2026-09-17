@@ -3,7 +3,7 @@
   background-color: var(--background-color, #F5F2EC);
   padding: 60px 20px;
   box-sizing: border-box;
-  margin-top: 80px;
+  margin-top: 0px;
   font-family: 'Manrope', var(--font-poppins), sans-serif;
   color: var(--text-main, #2A2A2A);
 }

@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+
+.imprint-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffe8;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.imprint-loader::before {
+  content: '';
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(196, 106, 74, 0.07) 0%, rgba(196, 106, 74, 0) 70%);
+  animation: imprintGlow 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes imprintGlow {
+  0%, 100% { opacity: 0.6; transform: scale(0.94); }
+  50%      { opacity: 1;   transform: scale(1.04); }
+}
+
+/* Spinner Wrapper - Theek 4.0 seconds baad ghumna shuru hoga */
+.imprint-loader__spin-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spinCircle 1s linear infinite;
+  animation-delay: 4s; /* 4s pe morph complete, yahan se ghumna shuru */
+}
+
+@keyframes spinCircle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Morph Box - 3.0s pe start hoga aur 1.0s mein complete (total 4.0s pe khatam) */
+.imprint-loader__morph-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 320px;
+  height: 120px;
+  border-radius: 0;
+  background: transparent;
+  border: 2px solid transparent;
+  animation: morphShape 1s cubic-bezier(0.65, 0, 0.35, 1) 3s forwards;
+}
+
+@keyframes morphShape {
+  0% {
+    width: 320px;
+    height: 120px;
+    background: transparent;
+    border-color: transparent;
+    border-radius: 0;
+  }
+  25% {
+    width: 320px;
+    height: 2px;
+    background: var(--Imprint-gold, #C8B093);
+    border-color: transparent;
+    border-radius: 0;
+  }
+  50% {
+    width: 40px;
+    height: 2px;
+    background: var(--Imprint-gold, #C8B093);
+    border-color: transparent;
+    border-radius: 0;
+  }
+  75%, 100% {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border-color: var(--Imprint-beige, #E7DCC5);
+    border-top-color: var(--Imprint-brown, #C46A4A);
+  }
+}
+
+.imprint-loader__mark {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  animation: fadeOutContent 0.5s ease-in-out 3s forwards; /* 3.0s pe text fade hona shuru */
+}
+
+@keyframes fadeOutContent {
+  0% { opacity: 1; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(0); }
+}
+
+.imprint-loader__wordmark {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.imprint-loader__letter {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: var(--Imprint-font-headLG, 32px);
+  line-height: 1;
+  color: var(--Imprint-black, #2A2A2A);
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(26px);
+  animation: imprintLetterIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--letter-index) * 60ms + 100ms); 
+} 
+
+.imprint-loader__letter--space {
+  width: 0.32em;
+}
+
+@keyframes imprintLetterIn {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(26px);
+  }
+  55% {
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.imprint-loader__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 14px 0 12px;
+  overflow: hidden;
+}
+
+.imprint-loader__divider-line {
+  height: 1px;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--Imprint-gold, #C8B093) 20%,
+    var(--Imprint-brown, #C46A4A) 50%,
+    var(--Imprint-gold, #C8B093) 80%,
+    transparent 100%
+  );
+  animation: imprintDividerGrow 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation-delay: 1.5s; /* Main text ke baad ye line draw hogi */
+}
+
+@keyframes imprintDividerGrow {
+  0%   { width: 0%;  opacity: 0; }
+  15%  { opacity: 1; }
+  100% { width: 100%; opacity: 1; }
+}
+
+.imprint-loader__subtitle {
+  display: flex;
+  justify-content: center;
+  margin-right: -3.5px;
+}
+
+.imprint-loader__subletter {
+  display: inline-block;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  font-size: var(--Imprint-font-headEVSM, 16px);
+  line-height: 1;
+  color: var(--text-muted, #7A8B6E);
+  letter-spacing: 3.5px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: imprintSubletterIn 0.6s ease-out forwards;
+  animation-delay: calc(var(--letter-index) * 40ms + 2.2s); /* Sabse aakhir mein smoothly subtitle aayega */
+} 
+
+@keyframes imprintSubletterIn {
+  0%   { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imprint-loader::before,
+  .imprint-loader__letter,
+  .imprint-loader__divider-line,
+  .imprint-loader__subletter,
+  .imprint-loader__morph-box,
+  .imprint-loader__spin-wrapper,
+  .imprint-loader__mark {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    width: revert;
+  }
+  .imprint-loader__divider-line {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .imprint-loader__letter {
+    font-size: 26px;
+  }
+  .imprint-loader__subletter {
+    font-size: 13px;
+  }
+  .imprint-loader__morph-box {
+    width: 280px; 
+  }
+}

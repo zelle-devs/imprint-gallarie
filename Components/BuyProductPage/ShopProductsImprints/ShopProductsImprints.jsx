@@ -10,7 +10,7 @@ function ShopProductsImprints() {
       id: 1,
       title: "Midnight Marble",
       type: "Customizable Phone Case",
-      price: "$ 65",
+      price: "Rs 6,500",
       colors: ["#D9C8B2", "#2A2A2A", "#555555"],
       img: "/PhoneCaseProduct1.jpg"
     },
@@ -18,7 +18,7 @@ function ShopProductsImprints() {
       id: 2,
       title: "Forest Green Leather",
       type: "Customizable Phone Case",
-      price: "$ 65",
+      price: "Rs 6,500",
       colors: ["#2C3E35", "#A67C52", "#2A2A2A"],
       img: "/PhoneCaseProduct2.jpg"
     },
@@ -26,7 +26,7 @@ function ShopProductsImprints() {
       id: 3,
       title: "Contour",
       type: "Customizable Phone Case",
-      price: "$ 65",
+      price: "Rs 6,500",
       colors: ["#2A2A2A", "#D9C8B2", "#D3D3D3"],
       img: "/PhoneCaseProduct3.jpg"
     },
@@ -34,7 +34,7 @@ function ShopProductsImprints() {
       id: 4,
       title: "Classic Sand",
       type: "Customizable Phone Case",
-      price: "$ 65",
+      price: "Rs 6,500",
       colors: ["#E7DCC5", "#D9C8B2", "#2A2A2A"],
       img: "/PhoneCaseProduct4.jpg"
     },
@@ -42,7 +42,7 @@ function ShopProductsImprints() {
       id: 5,
       title: "Signature Black",
       type: "Customizable Phone Case",
-      price: "$ 65",
+      price: "Rs 6,500",
       colors: ["#2A2A2A", "#1C2841", "#A67C52"],
       img: "/PhoneCaseProduct5.jpg"
     },
@@ -50,7 +50,7 @@ function ShopProductsImprints() {
       id: 6,
       title: "Vintage Brown",
       type: "Customizable Phone Case",
-      price: "$ 65",
+      price: "Rs 6,500",
       colors: ["#8B5A2B", "#D9C8B2", "#2A2A2A"],
       img: "/PhoneCaseProduct6.jpg"
     }

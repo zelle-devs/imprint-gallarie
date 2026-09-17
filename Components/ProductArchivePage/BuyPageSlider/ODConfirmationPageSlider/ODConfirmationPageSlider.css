@@ -1,24 +1,24 @@
-.containerBuyPageSlider {
+.containerODConfirmationPageSlider {
   width: 100%;
   background-color: var(--background-color, #F5F2EC);
   font-family: 'Manrope', var(--font-poppins), sans-serif;
   padding: 0px 0;
 }
 
-.bgContainerBuyPageSlider {
+.bgContainerODConfirmationPageSlider {
   position: relative;
   width: 100%;
   min-height: 90px;
-  background-image: url('../../../public/BuyProductSliderImageHeader.png');
+  background-image: url('../../../../public/CartPageSliderImageHeader.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-.overlayBuyPageSlider {
+.overlayODConfirmationPageSlider {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@
   z-index: 1;
 }
 
-.contentBuyPageSlider {
+.contentODConfirmationPageSlider {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -41,14 +41,14 @@
   align-items: center;
 }
 
-.leftColBuyPageSlider {
+.leftColODConfirmationPageSlider {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 600px;
 }
 
-.subtitleBuyPageSlider {
+.subtitleODConfirmationPageSlider {
   font-size: 11px;
   color: var(--Imprint-gold, #C8B093);
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   margin-bottom: 16px;
 }
 
-.titleBuyPageSlider {
+.titleODConfirmationPageSlider {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
   color: #ffffff;
@@ -67,7 +67,7 @@
   letter-spacing: 0.5px;
 }
 
-.descBuyPageSlider {
+.descODConfirmationPageSlider {
   font-size: var(--Imprint-font-paraSM, 14px);
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
@@ -75,14 +75,14 @@
   font-weight: 300;
 }
 
-.dividerBuyPageSlider {
+.dividerODConfirmationPageSlider {
   width: 40px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-bottom: 20px;
 }
 
-.breadcrumbBuyPageSlider {
+.breadcrumbODConfirmationPageSlider {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -90,26 +90,26 @@
   font-size: 11px;
 }
 
-.crumbLinkBuyPageSlider {
+.crumbLinkODConfirmationPageSlider {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.crumbLinkBuyPageSlider:hover {
+.crumbLinkODConfirmationPageSlider:hover {
   color: #ffffff;
 }
 
-.crumbSeparatorBuyPageSlider {
+.crumbSeparatorODConfirmationPageSlider {
   color: rgba(255, 255, 255, 0.4);
   font-size: 10px;
 }
 
-.crumbCurrentBuyPageSlider {
+.crumbCurrentODConfirmationPageSlider {
   color: #ffffff;
 }
 
-.rightColBuyPageSlider {
+.rightColODConfirmationPageSlider {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -118,7 +118,7 @@
   margin-right: 40px;
 }
 
-.rightTextItemBuyPageSlider {
+.rightTextItemODConfirmationPageSlider {
   font-size: 10px;
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
@@ -127,51 +127,52 @@
 }
 
 @media (max-width: 992px) {
-  .titleBuyPageSlider {
+  .titleODConfirmationPageSlider {
     font-size: 42px;
   }
   
-  .overlayBuyPageSlider {
+  .overlayODConfirmationPageSlider {
     background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
   }
-  
-  .bgContainerBuyPageSlider {
+  .bgContainerODConfirmationPageSlider {
     min-height: 70px;
   }
 }
 
 @media (max-width: 768px) {
-  .contentBuyPageSlider {
+  .contentODConfirmationPageSlider {
     padding: 50px 20px;
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .bgContainerBuyPageSlider {
+  .bgContainerODConfirmationPageSlider {
     border-top-left-radius: 0;
-    min-height: 70px;
   }
 
- 
-  .rightColBuyPageSlider {
+  .rightColODConfirmationPageSlider {
     display: none;
   }
-  
-  .overlayBuyPageSlider {
+  .bgContainerODConfirmationPageSlider {
+    min-height: 70px;
+  }
+  .overlayODConfirmationPageSlider {
     background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 100%);
   }
 }
 
 @media (max-width: 576px) {
-  .titleBuyPageSlider {
+  .titleODConfirmationPageSlider {
     font-size: 34px;
   }
   
-  .descBuyPageSlider {
+  .descODConfirmationPageSlider {
     font-size: var(--Imprint-font-paraESM, 12px);
   }
-  
-  .bgContainerBuyPageSlider {
+    .bgContainerODConfirmationPageSlider {
+    min-height: 70px;
+  }
+  .bgContainerODConfirmationPageSlider {
     min-height: 70px;
   }
 }

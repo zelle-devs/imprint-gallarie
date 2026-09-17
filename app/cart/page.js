@@ -9,7 +9,7 @@ function page() {
     <div>
       <CartPageSlider/>
         <TopSectionCartPage/>
-        <YouMayAlsoLikeCartMain/>
+        {/* <YouMayAlsoLikeCartMain/> */}
         <CustomPersonalUnforgettable/>
     </div>
   )
