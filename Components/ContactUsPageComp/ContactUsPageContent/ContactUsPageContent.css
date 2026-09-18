@@ -1,0 +1,967 @@
+.ContactUsPageContent {
+  background-color: var(--background-color);
+  color: var(--text-main);
+  font-family: var(--font-montserrat); /* Changed base font */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Specific rules to ensure all spans and p tags use Montserrat */
+.ContactUsPageContent p,
+.ContactUsPageContent span {
+  font-family: var(--font-montserrat);
+}
+
+/* Specific rules to ensure all heading tags use Playfair */
+.ContactUsPageContent h1,
+.ContactUsPageContent h2,
+.ContactUsPageContent h3,
+.ContactUsPageContent h4,
+.ContactUsPageContent h5,
+.ContactUsPageContent h6 {
+  font-family: var(--font-playfair);
+}
+ 
+.heroBannerContactUsPageContent {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--beyvora-beige);
+}
+
+.heroBannerImageContactUsPageContent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- Shared section icon ---------- */
+.sectionIconContactUsPageContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--beyvora-gold);
+  font-size: var(--beyvora-font-headSM);
+  margin-bottom: 10px;
+}
+
+/* ---------- Contact section (Speak With Us + 24/7 Support) ---------- */
+.contactSectionContactUsPageContent {
+  padding: 70px 60px;
+}
+
+.contactWrapContactUsPageContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Left column */
+.speakWithUsContactUsPageContent {
+  padding-right: 20px;
+}
+
+.speakHeadingContactUsPageContent {
+  font-family: var(--font-playfair);
+  font-size: var(--beyvora-font-headLG);
+  font-weight: 500;
+  margin: 0 0 14px 0;
+  color: var(--text-main);
+}
+
+.speakParaContactUsPageContent {
+  font-family: var(--font-montserrat);
+  font-size: var(--beyvora-font-paraMD);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0 0 32px 0;
+}
+
+.contactListContactUsPageContent {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contactItemContactUsPageContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contactIconContactUsPageContent {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--beyvora-brown);
+  color: var(--beyvora-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--beyvora-font-paraSM);
+}
+
+.contactLabelContactUsPageContent {
+  font-size: var(--beyvora-font-paraLG);
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  color: var(--text-main);
+}
+
+.contactValueContactUsPageContent {
+  font-size: var(--beyvora-font-paraSM);
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.brandLogosContactUsPageContent {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--beyvora-beige);
+  padding-top: 28px;
+}
+
+.brandLogoContactUsPageContent {
+  font-size: var(--beyvora-font-headSM);
+  color: var(--text-muted);
+  opacity: 0.75;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Right column: support form card */
+.supportFormContactUsPageContent {
+  background-color: var(--beyvora-beige);
+  padding: 48px 44px;
+}
+
+.supportHeadingContactUsPageContent {
+  font-family: var(--font-playfair);
+  font-size: var(--beyvora-font-headLG);
+  font-weight: 500;
+  margin: 0 0 14px 0;
+  color: var(--text-main);
+}
+
+.supportParaContactUsPageContent {
+  font-family: var(--font-montserrat);
+  font-size: var(--beyvora-font-paraMD);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0 0 28px 0;
+}
+
+.supportFormFieldsContactUsPageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRowContactUsPageContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formInputContactUsPageContent,
+.formTextareaContactUsPageContent {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--beyvora-white);
+  border: 1px solid var(--beyvora-beige);
+  padding: 14px 16px;
+  font-size: var(--beyvora-font-paraSM);
+  color: var(--text-main);
+  font-family: inherit;
+  outline: none;
+}
+
+.formInputContactUsPageContent::placeholder,
+.formTextareaContactUsPageContent::placeholder {
+  color: var(--text-muted);
+}
+
+.formTextareaContactUsPageContent {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.formSubmitBtnContactUsPageContent {
+  align-self: flex-start;
+  margin-top: 8px;
+  background-color: var(--beyvora-brown);
+  color: var(--beyvora-white);
+  border: none;
+  padding: 15px 34px;
+  font-size: var(--beyvora-font-paraSM);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.formSubmitBtnContactUsPageContent:hover {
+  background-color: var(--beyvora-olive);
+}
+
+/* ---------- App download banner ---------- */
+.appDownloadContactUsPageContent {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.appDownloadImageContactUsPageContent {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.appDownloadOverlayContactUsPageContent {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(28, 28, 28, 0.68);
+}
+
+.appDownloadContentContactUsPageContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 620px;
+  padding: 0 24px;
+}
+
+.appDownloadIconContactUsPageContent {
+  color: var(--beyvora-gold);
+}
+
+.appDownloadHeadingContactUsPageContent {
+  font-family: var(--font-playfair);
+  font-size: var(--beyvora-font-headLG);
+  font-weight: 500;
+  color: var(--beyvora-white);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.appDownloadParaContactUsPageContent {
+  font-family: var(--font-montserrat);
+  font-size: var(--beyvora-font-paraMD);
+  color: var(--beyvora-beige);
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+.storeButtonsContactUsPageContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.storeButtonContactUsPageContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--beyvora-black);
+  color: var(--beyvora-white);
+  border: 1px solid var(--beyvora-olive);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.storeButtonIconContactUsPageContent {
+  font-size: var(--beyvora-font-headSM);
+}
+
+.storeButtonTextContactUsPageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--beyvora-font-paraMD);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.storeButtonTextContactUsPageContent small {
+  font-size: var(--beyvora-font-paraESM);
+  color: var(--beyvora-beige);
+}
+
+/* ---------- Features row ---------- */
+.featuresContactUsPageContent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  padding: 60px 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.featureItemContactUsPageContent {
+  text-align: center;
+  padding: 0 12px;
+}
+
+.featureIconContactUsPageContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--beyvora-font-headMD);
+  color: var(--beyvora-brown);
+  margin-bottom: 14px;
+}
+
+.featureTitleContactUsPageContent {
+  font-family: var(--font-playfair);
+  font-size: var(--beyvora-font-headESM);
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  color: var(--text-main);
+}
+
+.featureTextContactUsPageContent {
+  font-family: var(--font-montserrat);
+  font-size: var(--beyvora-font-paraESM);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Map section ---------- */
+.mapSectionContactUsPageContent {
+  width: 100%;
+  height: 420px;
+}
+
+.mapIframeContactUsPageContent {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  filter: grayscale(15%) sepia(8%);
+} 
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET LARGE — 1024px and below
+   ========================================================= */
+@media (max-width: 1024px) {
+
+  /* ---------- Hero Banner ---------- */
+  .heroBannerContactUsPageContent {
+    height: 100px;
+  }
+
+
+  /* ---------- Contact Section ---------- */
+  .contactSectionContactUsPageContent {
+    padding: 60px 40px;
+  }
+
+  .contactWrapContactUsPageContent {
+    max-width: 900px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .speakWithUsContactUsPageContent {
+    padding-right: 10px;
+  }
+
+  .speakHeadingContactUsPageContent,
+  .supportHeadingContactUsPageContent {
+    font-size: clamp(28px, 3.5vw, 38px);
+    line-height: 1.2;
+  }
+
+  .speakParaContactUsPageContent,
+  .supportParaContactUsPageContent {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .contactListContactUsPageContent {
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+
+  .contactItemContactUsPageContent {
+    gap: 12px;
+  }
+
+  .contactIconContactUsPageContent {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .contactLabelContactUsPageContent {
+    font-size: 15px;
+  }
+
+  .contactValueContactUsPageContent {
+    font-size: 13px;
+  }
+
+  .brandLogosContactUsPageContent {
+    gap: 25px;
+    padding-top: 22px;
+  }
+
+  .brandLogoContactUsPageContent {
+    font-size: 18px;
+  }
+
+
+  /* ---------- Support Form ---------- */
+  .supportFormContactUsPageContent {
+    padding: 38px 34px;
+  }
+
+  .supportFormFieldsContactUsPageContent {
+    gap: 14px;
+  }
+
+  .formRowContactUsPageContent {
+    gap: 14px;
+  }
+
+  .formInputContactUsPageContent,
+  .formTextareaContactUsPageContent {
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+
+  .formTextareaContactUsPageContent {
+    min-height: 105px;
+  }
+
+  .formSubmitBtnContactUsPageContent {
+    padding: 13px 28px;
+    font-size: 13px;
+  }
+
+
+  /* ---------- App Download ---------- */
+  .appDownloadContactUsPageContent {
+    min-height: 390px;
+  }
+
+  .appDownloadContentContactUsPageContent {
+    max-width: 580px;
+  }
+
+  .appDownloadHeadingContactUsPageContent {
+    font-size: clamp(28px, 3.5vw, 38px);
+  }
+
+  .appDownloadParaContactUsPageContent {
+    font-size: 14px;
+  }
+
+
+  /* ---------- Features ---------- */
+  .featuresContactUsPageContent {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px;
+    padding: 50px 40px;
+    max-width: 1000px;
+  }
+
+  .featureItemContactUsPageContent {
+    padding: 0 8px;
+  }
+
+  .featureTitleContactUsPageContent {
+    font-size: 16px;
+  }
+
+  .featureTextContactUsPageContent {
+    font-size: 12px;
+  }
+
+
+  /* ---------- Map ---------- */
+  .mapSectionContactUsPageContent {
+    height: 380px;
+  }
+}
+
+
+/* =========================================================
+   TABLET SMALL — 768px and below
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* ---------- Hero Banner ---------- */
+  .heroBannerContactUsPageContent {
+    height: 90px;
+  }
+
+
+  /* ---------- Contact Section ---------- */
+  .contactSectionContactUsPageContent {
+    padding: 50px 30px;
+  }
+
+  .contactWrapContactUsPageContent {
+    max-width: 650px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .speakWithUsContactUsPageContent {
+    padding-right: 0;
+  }
+
+  .speakHeadingContactUsPageContent,
+  .supportHeadingContactUsPageContent {
+    font-size: clamp(28px, 5vw, 36px);
+  }
+
+  .speakParaContactUsPageContent,
+  .supportParaContactUsPageContent {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .contactListContactUsPageContent {
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .brandLogosContactUsPageContent {
+    gap: 30px;
+  }
+
+
+  /* ---------- Support Form ---------- */
+  .supportFormContactUsPageContent {
+    padding: 38px 32px;
+  }
+
+  .supportParaContactUsPageContent {
+    max-width: 100%;
+  }
+
+  .formRowContactUsPageContent {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* ---------- App Download ---------- */
+  .appDownloadContactUsPageContent {
+    min-height: 360px;
+  }
+
+  .appDownloadContentContactUsPageContent {
+    max-width: 560px;
+    padding: 0 30px;
+  }
+
+  .appDownloadHeadingContactUsPageContent {
+    font-size: clamp(27px, 5vw, 35px);
+  }
+
+  .appDownloadParaContactUsPageContent {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 26px;
+  }
+
+  .storeButtonsContactUsPageContent {
+    gap: 12px;
+  }
+
+  .storeButtonContactUsPageContent {
+    padding: 9px 16px;
+    gap: 9px;
+  }
+
+  .storeButtonTextContactUsPageContent {
+    font-size: 13px;
+  }
+
+  .storeButtonTextContactUsPageContent small {
+    font-size: 9px;
+  }
+
+
+  /* ---------- Features ---------- */
+  .featuresContactUsPageContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+    padding: 45px 30px;
+    max-width: 650px;
+  }
+
+  .featureItemContactUsPageContent {
+    padding: 0 8px;
+  }
+
+  .featureIconContactUsPageContent {
+    margin-bottom: 11px;
+  }
+
+  .featureTitleContactUsPageContent {
+    font-size: 16px;
+  }
+
+  .featureTextContactUsPageContent {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- Map ---------- */
+  .mapSectionContactUsPageContent {
+    height: 340px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE LARGE — 576px and below
+   ========================================================= */
+@media (max-width: 576px) {
+
+  /* ---------- Hero Banner ---------- */
+  .heroBannerContactUsPageContent {
+    height: 80px;
+  }
+
+
+  /* ---------- Contact Section ---------- */
+  .contactSectionContactUsPageContent {
+    padding: 38px 20px;
+  }
+
+  .contactWrapContactUsPageContent {
+    gap: 32px;
+  }
+
+  .speakHeadingContactUsPageContent,
+  .supportHeadingContactUsPageContent {
+    font-size: clamp(25px, 7vw, 31px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .speakParaContactUsPageContent,
+  .supportParaContactUsPageContent {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+
+  /* ---------- Contact Information ---------- */
+  .contactListContactUsPageContent {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .contactItemContactUsPageContent {
+    gap: 10px;
+  }
+
+  .contactIconContactUsPageContent {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 12px;
+  }
+
+  .contactLabelContactUsPageContent {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .contactValueContactUsPageContent {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .brandLogosContactUsPageContent {
+    gap: 18px 25px;
+    padding-top: 20px;
+  }
+
+  .brandLogoContactUsPageContent {
+    font-size: 16px;
+  }
+
+
+  /* ---------- Support Form ---------- */
+  .supportFormContactUsPageContent {
+    padding: 30px 20px;
+  }
+
+  .supportFormFieldsContactUsPageContent {
+    gap: 13px;
+  }
+
+  .formRowContactUsPageContent {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .formInputContactUsPageContent,
+  .formTextareaContactUsPageContent {
+    padding: 13px 14px;
+    font-size: 12.5px;
+  }
+
+  .formTextareaContactUsPageContent {
+    min-height: 115px;
+  }
+
+  .formSubmitBtnContactUsPageContent {
+    width: 100%;
+    margin-top: 5px;
+    padding: 14px 18px;
+    font-size: 12.5px;
+  }
+
+
+  /* ---------- App Download ---------- */
+  .appDownloadContactUsPageContent {
+    min-height: 390px;
+  }
+
+  .appDownloadContentContactUsPageContent {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 480px;
+    padding: 0 20px;
+  }
+
+  .appDownloadHeadingContactUsPageContent {
+    font-size: clamp(25px, 7vw, 31px);
+    line-height: 1.25;
+    margin-bottom: 13px;
+  }
+
+  .appDownloadParaContactUsPageContent {
+    font-size: 12.5px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .storeButtonsContactUsPageContent {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .storeButtonContactUsPageContent {
+    width: 100%;
+    max-width: 260px;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 10px 16px;
+  }
+
+
+  /* ---------- Features ---------- */
+  .featuresContactUsPageContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 35px 20px;
+    max-width: 420px;
+  }
+
+  .featureItemContactUsPageContent {
+    padding: 0 15px;
+  }
+
+  .featureIconContactUsPageContent {
+    margin-bottom: 10px;
+  }
+
+  .featureTitleContactUsPageContent {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .featureTextContactUsPageContent {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- Map ---------- */
+  .mapSectionContactUsPageContent {
+    height: 300px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE SMALL — 400px and below
+   ========================================================= */
+@media (max-width: 400px) {
+
+  /* ---------- Hero Banner ---------- */
+  .heroBannerContactUsPageContent {
+    height: 70px;
+  }
+
+
+  /* ---------- Contact Section ---------- */
+  .contactSectionContactUsPageContent {
+    padding: 30px 16px;
+  }
+
+  .contactWrapContactUsPageContent {
+    gap: 26px;
+  }
+
+  .speakHeadingContactUsPageContent,
+  .supportHeadingContactUsPageContent {
+    font-size: 24px;
+  }
+
+  .speakParaContactUsPageContent,
+  .supportParaContactUsPageContent {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+
+  /* ---------- Contact Information ---------- */
+  .contactListContactUsPageContent {
+    gap: 16px;
+  }
+
+  .contactIconContactUsPageContent {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 11px;
+  }
+
+  .contactLabelContactUsPageContent {
+    font-size: 13px;
+  }
+
+  .contactValueContactUsPageContent {
+    font-size: 11.5px;
+  }
+
+  .brandLogosContactUsPageContent {
+    gap: 15px 20px;
+    padding-top: 18px;
+  }
+
+  .brandLogoContactUsPageContent {
+    font-size: 14px;
+  }
+
+
+  /* ---------- Support Form ---------- */
+  .supportFormContactUsPageContent {
+    padding: 26px 16px;
+  }
+
+  .formInputContactUsPageContent,
+  .formTextareaContactUsPageContent {
+    padding: 12px 13px;
+    font-size: 11.5px;
+  }
+
+  .formTextareaContactUsPageContent {
+    min-height: 105px;
+  }
+
+  .formSubmitBtnContactUsPageContent {
+    padding: 13px 15px;
+    font-size: 12px;
+  }
+
+
+  /* ---------- App Download ---------- */
+  .appDownloadContactUsPageContent {
+    min-height: 370px;
+  }
+
+  .appDownloadContentContactUsPageContent {
+    padding: 0 16px;
+  }
+
+  .appDownloadHeadingContactUsPageContent {
+    font-size: 24px;
+  }
+
+  .appDownloadParaContactUsPageContent {
+    font-size: 11.5px;
+    line-height: 1.65;
+  }
+
+  .storeButtonContactUsPageContent {
+    max-width: 240px;
+    padding: 9px 14px;
+  }
+
+  .storeButtonIconContactUsPageContent {
+    font-size: 17px;
+  }
+
+  .storeButtonTextContactUsPageContent {
+    font-size: 12px;
+  }
+
+  .storeButtonTextContactUsPageContent small {
+    font-size: 8px;
+  }
+
+
+  /* ---------- Features ---------- */
+  .featuresContactUsPageContent {
+    gap: 26px;
+    padding: 30px 16px;
+  }
+
+  .featureItemContactUsPageContent {
+    padding: 0 8px;
+  }
+
+  .featureTitleContactUsPageContent {
+    font-size: 14px;
+  }
+
+  .featureTextContactUsPageContent {
+    font-size: 11.5px;
+  }
+
+
+  /* ---------- Map ---------- */
+  .mapSectionContactUsPageContent {
+    height: 260px;
+  }
+} 
