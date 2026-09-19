@@ -9,9 +9,9 @@
   position: relative;
   width: 100%;
   min-height: 550px;
-  background-image: url('../../../public/imprintContactUSPageimage4.jpg');
+  background-image: url('../../../public/aboutslidermainimage1.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
