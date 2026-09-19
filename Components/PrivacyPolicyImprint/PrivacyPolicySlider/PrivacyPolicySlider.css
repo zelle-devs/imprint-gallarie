@@ -1,15 +1,15 @@
-.containerAboutUsPageSlider {
+.containerPrivacyPolicySlider {
   width: 100%;
   background-color: var(--background-color, #F5F2EC);
   font-family: 'Manrope', var(--font-poppins), sans-serif;
   padding: 0px 0;
 }
 
-.bgContainerAboutUsPageSlider {
+.bgContainerPrivacyPolicySlider {
   position: relative;
   width: 100%;
-  min-height: 550px;
-  background-image: url('../../../public/imprintContactUSPageimage4.jpg');
+  min-height: 90px;
+  background-image: url('../../../public/BuyProductSliderImageHeader.png');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -18,17 +18,17 @@
   overflow: hidden;
 }
 
-.overlayAboutUsPageSlider {
+.overlayPrivacyPolicySlider {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 40%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.751) 0%, rgba(15, 15, 15, 0.751) 40%, rgba(15, 15, 15, 0.751) 100%);
   z-index: 1;
 }
 
-.contentAboutUsPageSlider {
+.contentPrivacyPolicySlider {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -41,14 +41,14 @@
   align-items: center;
 }
 
-.leftColAboutUsPageSlider {
+.leftColPrivacyPolicySlider {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 600px;
 }
 
-.subtitleAboutUsPageSlider {
+.subtitlePrivacyPolicySlider {
   font-size: 11px;
   color: var(--Imprint-gold, #C8B093);
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   margin-bottom: 16px;
 }
 
-.titleAboutUsPageSlider {
+.titlePrivacyPolicySlider {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
   color: #ffffff;
@@ -67,7 +67,7 @@
   letter-spacing: 0.5px;
 }
 
-.descAboutUsPageSlider {
+.descPrivacyPolicySlider {
   font-size: var(--Imprint-font-paraSM, 14px);
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
@@ -75,14 +75,14 @@
   font-weight: 300;
 }
 
-.dividerAboutUsPageSlider {
+.dividerPrivacyPolicySlider {
   width: 40px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-bottom: 20px;
 }
 
-.breadcrumbAboutUsPageSlider {
+.breadcrumbPrivacyPolicySlider {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -90,26 +90,26 @@
   font-size: 11px;
 }
 
-.crumbLinkAboutUsPageSlider {
+.crumbLinkPrivacyPolicySlider {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.crumbLinkAboutUsPageSlider:hover {
+.crumbLinkPrivacyPolicySlider:hover {
   color: #ffffff;
 }
 
-.crumbSeparatorAboutUsPageSlider {
+.crumbSeparatorPrivacyPolicySlider {
   color: rgba(255, 255, 255, 0.4);
   font-size: 10px;
 }
 
-.crumbCurrentAboutUsPageSlider {
+.crumbCurrentPrivacyPolicySlider {
   color: #ffffff;
 }
 
-.rightColAboutUsPageSlider {
+.rightColPrivacyPolicySlider {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -118,7 +118,7 @@
   margin-right: 40px;
 }
 
-.rightTextItemAboutUsPageSlider {
+.rightTextItemPrivacyPolicySlider {
   font-size: 10px;
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
@@ -127,45 +127,51 @@
 }
 
 @media (max-width: 992px) {
-  .titleAboutUsPageSlider {
+  .titlePrivacyPolicySlider {
     font-size: 42px;
   }
   
-  .overlayAboutUsPageSlider {
+  .overlayPrivacyPolicySlider {
     background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
+  }
+  
+  .bgContainerPrivacyPolicySlider {
+    min-height: 70px;
   }
 }
 
 @media (max-width: 768px) {
-  .contentAboutUsPageSlider {
+  .contentPrivacyPolicySlider {
     padding: 50px 20px;
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .bgContainerAboutUsPageSlider {
+  .bgContainerPrivacyPolicySlider {
     border-top-left-radius: 0;
+    min-height: 70px;
   }
 
-  .rightColAboutUsPageSlider {
+ 
+  .rightColPrivacyPolicySlider {
     display: none;
   }
   
-  .overlayAboutUsPageSlider {
+  .overlayPrivacyPolicySlider {
     background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 100%);
   }
 }
 
 @media (max-width: 576px) {
-  .titleAboutUsPageSlider {
+  .titlePrivacyPolicySlider {
     font-size: 34px;
   }
   
-  .descAboutUsPageSlider {
+  .descPrivacyPolicySlider {
     font-size: var(--Imprint-font-paraESM, 12px);
   }
   
-  .bgContainerAboutUsPageSlider {
-    min-height: 400px;
+  .bgContainerPrivacyPolicySlider {
+    min-height: 70px;
   }
 }

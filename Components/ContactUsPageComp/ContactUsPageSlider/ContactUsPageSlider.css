@@ -1,28 +1,30 @@
-.wrapperContactUsPageSlider {
+.containerContactUsPageSlider {
   width: 100%;
-  background-color: var(--background-color, #E8E4DC);
-  font-family: var(--font-poppins), 'Montserrat', sans-serif;
+  background-color: var(--background-color, #F5F2EC);
+  font-family: 'Manrope', var(--font-poppins), sans-serif;
+  padding: 0px 0;
 }
 
 .bgContainerContactUsPageSlider {
   position: relative;
   width: 100%;
-  min-height: 500px;
-  background-image: url('../../../public/contactusslidermainimage1.jpg');
+  min-height: 550px;
+  background-image: url('../../../public/imprintContactUSPageimage2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
-.gradientOverlayContactUsPageSlider {
+.overlayContactUsPageSlider {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(35, 30, 25, 0.95) 0%, rgba(35, 30, 25, 0.6) 45%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 40%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;
 }
 
@@ -30,7 +32,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  /* max-width: 1400px; */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 60px 40px;
   box-sizing: border-box;
@@ -39,120 +41,98 @@
   align-items: center;
 }
 
-.leftSideContactUsPageSlider {
+.leftColContactUsPageSlider {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 480px;
-  gap: 16px;
+  max-width: 600px;
 }
 
 .subtitleContactUsPageSlider {
   font-size: 11px;
-  color: var(--beyvora-gold, #C2A56A);
+  color: var(--Imprint-gold, #C8B093);
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .titleContactUsPageSlider {
-  font-family: 'Playfair Display', 'Times New Roman', serif;
-  font-size: 56px;
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
   color: #ffffff;
   font-weight: 400;
   margin: 0;
-  line-height: 1.1;
-  letter-spacing: 1px;
-}
-
-.taglineContactUsPageSlider {
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 400;
-  margin: 4px 0 0 0;
+  line-height: 1.15;
   letter-spacing: 0.5px;
 }
 
-.descriptionContactUsPageSlider {
-  font-size: var(--beyvora-font-paraSM, 14px);
+.descContactUsPageSlider {
+  font-size: var(--Imprint-font-paraSM, 14px);
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
-  margin: 10px 0 20px 0;
+  margin: 20px 0 24px 0;
   font-weight: 300;
 }
 
-.exploreBtnContactUsPageSlider {
-  background-color: var(--beyvora-gold, #D9C8B2);
-  color: var(--beyvora-black, #1C1C1C);
-  border: none;
-  padding: 14px 28px;
+.dividerContactUsPageSlider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+.breadcrumbContactUsPageSlider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  display: none;
   font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.exploreBtnContactUsPageSlider:hover {
-  background-color: var(--background-color);
+.crumbLinkContactUsPageSlider {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.arrowIconContactUsPageSlider {
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.exploreBtnContactUsPageSlider:hover .arrowIconContactUsPageSlider {
-  transform: translateX(4px);
-}
-
-.rightSideContactUsPageSlider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  margin-right: 20px;
-  margin-top: 0px;
-}
-
-.rightTextContactUsPageSlider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  font-size: 10px;
+.crumbLinkContactUsPageSlider:hover {
   color: #ffffff;
+}
+
+.crumbSeparatorContactUsPageSlider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+}
+
+.crumbCurrentContactUsPageSlider {
+  color: #ffffff;
+}
+
+.rightColContactUsPageSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+  gap: 8px;
+  margin-right: 40px;
+}
+
+.rightTextItemContactUsPageSlider {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.mutedTextContactUsPageSlider {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-}
-
-.verticalLineContactUsPageSlider {
-  width: 1px;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 4px;
+  font-weight: 500;
 }
 
 @media (max-width: 992px) {
-  .gradientOverlayContactUsPageSlider {
-    background: linear-gradient(90deg, rgba(35, 30, 25, 0.9) 0%, rgba(35, 30, 25, 0.7) 70%, rgba(0, 0, 0, 0.4) 100%);
-  }
-
   .titleContactUsPageSlider {
     font-size: 42px;
+  }
+  
+  .overlayContactUsPageSlider {
+    background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
   }
 }
 
@@ -163,15 +143,29 @@
     align-items: flex-start;
   }
   
-  .rightSideContactUsPageSlider {
-    display: none; 
+  .bgContainerContactUsPageSlider {
+    border-top-left-radius: 0;
+  }
+
+  .rightColContactUsPageSlider {
+    display: none;
+  }
+  
+  .overlayContactUsPageSlider {
+    background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 0%, rgba(20, 20, 20, 0.8) 100%);
+  }
+}
+
+@media (max-width: 576px) {
+  .titleContactUsPageSlider {
+    font-size: 34px;
+  }
+  
+  .descContactUsPageSlider {
+    font-size: var(--Imprint-font-paraESM, 12px);
   }
   
   .bgContainerContactUsPageSlider {
-    min-height: 500px;
-  }
-  
-  .gradientOverlayContactUsPageSlider {
-    background: linear-gradient(90deg, rgba(35, 30, 25, 0.9) 0%, rgba(35, 30, 25, 0.8) 100%);
+    min-height: 400px;
   }
 }

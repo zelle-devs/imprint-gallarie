@@ -89,7 +89,7 @@ function Header() {
 
                         <div className="BevoraMainHeader-logo" onClick={() => router.push('/')}>
                             <div >
-                                <strong>IMPRINT</strong> <br/><span>GALLARIA</span>
+                                <strong>IMPRINT</strong> <br/><span>GALLERIA</span>
 
                             </div>
                             <nav className="BevoraMainHeader-nav">

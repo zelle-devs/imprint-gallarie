@@ -51,7 +51,7 @@ function Footer() {
 
                 <div className="col1-ImprintFooterMain">
                     <div className="BevoraMainFooter-logo">
-                        <strong>Imprint</strong> <span>Gallary</span>
+                        <strong>Imprint</strong> <span>Gallery</span>
                     </div>
                     <p className="desc-ImprintFooterMain">
                         Join 10K+ design pros and access unique, high-quality pieces by original creators, 100% risk-free. Discover the Imprint difference.
@@ -69,7 +69,7 @@ function Footer() {
                     <div className={`accordion-content ${openSection === 'company' ? 'open' : ''}`}>
                         <ul className="list-ImprintFooterMain">
                             <li><a href="/about-us" onClick={(e) => handleNavClick(e, '/about-us', 'About Us')} className="link-ImprintFooterMain">About Us</a></li> 
-                            <li><a href="#contact" onClick={(e) => handleNavClick(e, '#contact', 'Contact Us')} className="link-ImprintFooterMain">Contact Us</a></li> 
+                            <li><a href="/contact-us" onClick={(e) => handleNavClick(e, '/contact-us', 'Contact Us')} className="link-ImprintFooterMain">Contact Us</a></li> 
                             <li><a href="#sale" onClick={(e) => handleNavClick(e, '#sale', 'Sale')} className="link-ImprintFooterMain">Sale</a></li>
                             <li><a href="#blog" onClick={(e) => handleNavClick(e, '#blog', 'Blog')} className="link-ImprintFooterMain">Blog</a></li> 
                         </ul>
@@ -98,9 +98,9 @@ function Footer() {
 
                 <div className="bottom-bar-ImprintFooterMain">
                     <div className="bottom-links-ImprintFooterMain">
-                        <a href="#products-sitemap" onClick={(e) => handleNavClick(e, '#products-sitemap', 'Returns & Refunds')} className="bottom-link-ImprintFooterMain">Returns & Refunds</a>
-                        <a href="#creators-sitemap" onClick={(e) => handleNavClick(e, '#creators-sitemap', 'Shipping Policy')} className="bottom-link-ImprintFooterMain">Shipping Policy</a>
-                        <a href="#privacy-policy" onClick={(e) => handleNavClick(e, '#privacy-policy', 'FAQ')} className="bottom-link-ImprintFooterMain">FAQ</a> 
+                        <a href="/privacy-policy" onClick={(e) => handleNavClick(e, '/privacy-policy', 'Privacy Policy')} className="bottom-link-ImprintFooterMain">Privacy Policy</a> 
+                        <a href="/returns-and-shipping" onClick={(e) => handleNavClick(e, '/returns-and-shipping', 'Returns & Shipping')} className="bottom-link-ImprintFooterMain">Returns & Shipping</a> 
+                        <a href="/terms-and-conditions" onClick={(e) => handleNavClick(e, '/terms-and-conditions', 'Terms & Conditions')} className="bottom-link-ImprintFooterMain">Terms & Conditions</a> 
                     </div>
 
                     <div className="bottom-info-ImprintFooterMain">

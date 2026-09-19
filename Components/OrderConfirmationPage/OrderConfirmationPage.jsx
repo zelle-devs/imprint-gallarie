@@ -185,7 +185,7 @@ function OrderConfirmationPage() {
         <div className="cardOrderConfirmationPage">
 
           <div className="brandStripOrderConfirmationPage">
-            <span className="brandMarkOrderConfirmationPage">IMPRINT<br/> <span style={{fontSize:'8px', marginTop:'-5px', fontFamily:'var(--font-montserrat)', letterSpacing:'5.5px'}}>GALLARIA</span></span>
+            <span className="brandMarkOrderConfirmationPage">IMPRINT<br/> <span style={{fontSize:'8px', marginTop:'-5px', fontFamily:'var(--font-montserrat)', letterSpacing:'5.5px'}}>GALLERIA</span></span>
             <span className="orderRefOrderConfirmationPage">Order {order.orderNumber}</span>
           </div>
 

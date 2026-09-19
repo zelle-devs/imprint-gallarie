@@ -1,40 +1,42 @@
 import React from 'react';
 import './ContactUsPageSlider.css';
-import { MoveRight } from 'lucide-react';
 
 function ContactUsPageSlider() {
   return (
-    <div className="wrapperContactUsPageSlider">
+    <div className="containerContactUsPageSlider">
       <div className="bgContainerContactUsPageSlider">
-        <div className="gradientOverlayContactUsPageSlider"></div>
+        <div className="overlayContactUsPageSlider"></div>
         
         <div className="contentContactUsPageSlider">
-          
-          <div className="leftSideContactUsPageSlider">
-            <span className="subtitleContactUsPageSlider">GET IN TOUCH</span>
-            <h2 className="titleContactUsPageSlider">
-              LET'S TALK<br />DECOR
-            </h2>
-            <h3 className="taglineContactUsPageSlider">Inspiring. Personalized. Seamless.</h3>
-            <p className="descriptionContactUsPageSlider">
-              Whether you are looking for the perfect statement piece or need expert advice for a complete room makeover, our team is here to help. Reach out to us and let's craft a beautiful space together.
+          <div className="leftColContactUsPageSlider">
+            <span className="subtitleContactUsPageSlider">IMPRINT GALLERIA</span>
+            
+            <h1 className="titleContactUsPageSlider">
+              Let's Get<br />Connected.
+            </h1>
+            
+            <p className="descContactUsPageSlider">
+              Have a question about a piece or need assistance?<br />Reach out and let us help you bring your vision to life.
             </p>
-            {/* <button className="exploreBtnContactUsPageSlider">
-              SEND A MESSAGE <span className="arrowIconContactUsPageSlider"><MoveRight strokeWidth={1.4}/></span>
-            </button> */}
-          </div>
-
-          <div className="rightSideContactUsPageSlider">
-            <div className="rightTextContactUsPageSlider">
-              <span>BRING</span>
-              <span>YOUR VISION</span>
-              <span className="mutedTextContactUsPageSlider">TO REALITY</span>
-              <span className="mutedTextContactUsPageSlider">WITH US.</span>
+            
+            <div className="dividerContactUsPageSlider"></div>
+            
+            <div className="breadcrumbContactUsPageSlider">
+              <a href="#" className="crumbLinkContactUsPageSlider">Home</a>
+              <span className="crumbSeparatorContactUsPageSlider">&gt;</span>
+              <span className="crumbCurrentContactUsPageSlider">Contact Us</span>
             </div>
-            {/* <div className="verticalLineContactUsPageSlider"></div> */}
           </div>
 
+          <div className="rightColContactUsPageSlider">
+            <span className="rightTextItemContactUsPageSlider">WE</span>
+            <span className="rightTextItemContactUsPageSlider">WOULD LOVE</span>
+            <span className="rightTextItemContactUsPageSlider">TO HEAR</span>
+            <span className="rightTextItemContactUsPageSlider">FROM</span>
+            <span className="rightTextItemContactUsPageSlider">YOU.</span>
+          </div>
         </div>
+        
       </div>
     </div>
   );

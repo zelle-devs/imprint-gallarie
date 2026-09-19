@@ -244,6 +244,7 @@
   font-family: var(--font-playfair);
   font-size: var(--Imprint-font-headEVSM);
   font-weight: 600;
+  color: var(--background-color);
 }
 .about-pillar__text {
   margin: 0;
@@ -256,10 +257,11 @@
 /* ---------- 4. WHAT WE OFFER ---------- */
 .about-offer { padding: 90px 0; }
 .about-offer__grid {
-  display: grid;
-  grid-template-columns: 1.8fr 0.6fr;
-  gap: 60px;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: nowrap;
+flex-direction: row;
 }
 .about-offer__cards{
   width: 100%;
@@ -269,7 +271,8 @@
 }
 .about-offer__cards img{
   gap: 18px;
-  width: 540px;
+  width: 100%;
+  max-width: 840px;
   border-radius: 10px;
 }
 .about-card { margin: 0; }
@@ -385,7 +388,22 @@
   .about-offer,
   .about-values { padding: 54px 0; }
   .about-vision { padding: 70px 0; }
-
+  .about-who__grid{
+    grid-template-columns: 1fr;
+  }
+  .about-pillars{
+    border-top: 1px solid #e7dcc540;
+    flex-direction: column;
+    border-left: none;
+    gap: 30px;
+    margin: 0;
+    padding: 30px 0 0 0px;
+    list-style: none;
+    display: flex;
+  }
+  .about-mission__grid{
+    grid-template-columns: 1fr;
+  }
   /* stats 2 x 2 */
   .about-stats__grid { grid-template-columns: repeat(2, 1fr); }
   .about-stat { padding: 22px 10px; }
@@ -405,7 +423,22 @@
 
   .about-cta .about-btn { width: 100%; justify-content: center; }
   .about-btn { padding: 13px 22px; }
+      .about-offer__grid {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-direction: column;
 }
+
+.about-value__text{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
 
 
 /* ==========================================================
@@ -420,14 +453,39 @@
   .about-offer,
   .about-values { padding: 54px 0; }
   .about-vision { padding: 70px 0; }
-
+     .about-mission__grid{
+    grid-template-columns: 1fr;
+  } 
+  .about-value__text{
+  width: 300px;
+}
+        .about-offer__grid {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-direction: column;
+}
+    .about-pillars{
+    border-top: 1px solid #e7dcc540;
+    flex-direction: column;
+    border-left: none;
+    gap: 30px;
+    margin: 0;
+    padding: 30px 0 0 0px;
+    list-style: none;
+    display: flex;
+  }
   /* stats 2 x 2 */
   .about-stats__grid { grid-template-columns: repeat(2, 1fr); }
   .about-stat { padding: 22px 10px; }
   .about-stat:nth-child(2) { border-right: 0; }
   .about-stat:nth-child(-n + 2) { border-bottom: 1px solid var(--Imprint-beige); }
   .about-stat__value { font-size: var(--Imprint-font-headSM); }
-
+  .about-who__grid{
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
   .about-who__media { padding: 0 0 16px 16px; }
   .about-values__sub { margin-bottom: 36px; }
   .about-values__grid { grid-template-columns: 1fr; gap: 32px; }
@@ -437,7 +495,9 @@
     align-items: flex-start;
     text-align: left;
   }
-
+  .about-offer__grid{
+    grid-template-columns: 1fr;
+  }
   .about-cta .about-btn { width: 100%; justify-content: center; }
   .about-btn { padding: 13px 22px; }
 }
@@ -457,14 +517,17 @@
 
   .about-vision { padding: 90px 0; }
 
-  .about-who__grid { gap: 44px; }
+  .about-who__grid { gap: 44px; grid-template-columns: 1fr; }
   .about-mission__grid { gap: 40px; }
   .about-pillars { padding-left: 36px; }
 
-  .about-offer__grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+       .about-offer__grid {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-direction: column;
+}
 
   .about-values__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -508,14 +571,17 @@
 
   .about-vision { padding: 90px 0; }
 
-  .about-who__grid { gap: 44px; }
+  .about-who__grid { gap: 44px; grid-template-columns: 1fr; }
   .about-mission__grid { gap: 40px; }
   .about-pillars { padding-left: 36px; }
 
-  .about-offer__grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+      .about-offer__grid {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-direction: column;
+}
 
   .about-values__grid {
     grid-template-columns: repeat(2, 1fr);

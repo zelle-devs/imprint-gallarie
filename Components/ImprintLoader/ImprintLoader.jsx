@@ -2,7 +2,7 @@ import React from 'react';
 import './ImprintLoader.css';
 
 const WORDMARK = 'IMPRINT';
-const SUBMARK = 'GALLARIA';
+const SUBMARK = 'GALLERIA';
  
 export default function ImprintLoader({ label = 'Loading' }) {
   return (
@@ -36,7 +36,7 @@ export default function ImprintLoader({ label = 'Loading' }) {
             <div className="imprint-loader__subtitle">
               {SUBMARK.split('').map((letter, index) => (
                 <span
-                  key={`gallaria-${index}`}
+                  key={`galleria-${index}`}
                   className="imprint-loader__subletter"
                   style={{ '--letter-index': index }}
                 >
